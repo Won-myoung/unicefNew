@@ -1,0 +1,314 @@
+@import url("./colorVaration.css");
+
+div {
+  overflow-wrap: break-word;
+  /* word-wrap: break-word; */
+}
+.introduce {
+  position: relative;
+}
+
+.introTopBar {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.introBodyText {
+  max-width: 1120px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 70px 20px;
+  span {
+    font-weight: bold;
+    color: var(--color-mainBlue);
+  }
+  :last-child {
+    margin-top: 50px;
+  }
+}
+.introWhatDifferent {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  > h2 {
+    margin-bottom: 96px;
+  }
+}
+
+.introWhatDifferentBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  > div {
+    background-color: #eee;
+    margin: 0 -20px;
+    /* padding-left: 20px; */
+    flex-grow: 1;
+    h3 {
+      color: var(--color-mainBlue);
+    }
+    strong {
+      color: var(--color-mainBlue);
+    }
+    p {
+      font-size: 16px;
+      margin-top: 32px;
+    }
+  }
+  > div:first-child {
+    width: 100%;
+    padding-left: 20px;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+.introWhatTextBox {
+  padding: 96px 20px 0 0;
+  flex-grow: 1;
+}
+
+.introRecord {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  h2 {
+    padding-bottom: 64px;
+  }
+}
+.introRecordList li {
+  padding: 7px 0;
+  margin: 0 0 32px 36px;
+}
+.introRecordList li::before {
+  content: "1";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-mainBlue);
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  line-height: 1.8;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 12px;
+  margin-left: -36px;
+}
+.introRecordList p {
+  font-weight: bold;
+  color: var(--color-mainBlue);
+}
+
+.introRecordList li:nth-child(2):before {
+  content: "2";
+}
+.introRecordList li:nth-child(3):before {
+  content: "3";
+}
+
+.introWork {
+  padding: 120px 20px;
+  max-width: 1120px;
+  margin: 0 auto;
+  h2 {
+    margin-bottom: 64px;
+  }
+  p {
+    line-height: 1.8;
+    margin-bottom: 64px;
+  }
+  button {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    height: 80px;
+    background-color: var(--color-mainBlue);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0 auto;
+    /* position: relative; */
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 110px;
+  }
+}
+.introWork button::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 6px;
+  background: url("/public/introduce/linkIconWhite.png") no-repeat
+    center/contain;
+}
+.introWork button:hover {
+  background-color: #374ea2;
+}
+
+.introPlan {
+  border: 3px solid #72c9eb;
+  border-radius: 24px;
+  padding: 0 15px 60px;
+  .introPlanHead h4 {
+    max-width: 514px;
+    margin: 0 auto;
+    height: 60px;
+    background-color: #72c9eb;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 20px;
+    color: var(--color-white);
+    padding: 0 15px;
+    /* margin-top: -28px; */
+  }
+  > div > img {
+    display: block;
+    margin: 0 auto;
+    width: 54px;
+    height: 54px;
+    /* margin-bottom: 27px; */
+  }
+}
+.introPlanHead {
+  margin: -85px auto 0;
+}
+
+.introPlan ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  padding: 20px;
+  overflow: auto;
+  li {
+    text-align: center;
+    min-width: 188px;
+    height: 244px;
+    padding: 32px 10px;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-sizing: border-box;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      span {
+        color: var(--color-mainBlue);
+        font-size: 16px;
+      }
+    }
+    img {
+      height: 80px;
+      margin: 40px auto 0;
+      padding: 0;
+    }
+  }
+  li:hover {
+    outline: 2px solid var(--color-mainBlue);
+  }
+}
+.introPlan ul::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 조절 */
+  height: 8px; /* 세로 스크롤바 높이 조절 */
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-mainBlue); /* 스크롤바 색상 */
+  border-radius: 4px; /* 스크롤바 모서리 둥글게 */
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0056b3; /* 스크롤바 Hover 시 색상 */
+}
+
+.introPlanHead02 {
+  h4 {
+    max-width: 514px;
+    margin: 0 auto;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: rgb(226, 240, 246);
+    color: var(--color-mainBlue);
+    padding: 0 15px;
+    margin-top: 54px;
+    border-radius: 24px;
+  }
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 514px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0;
+    overflow: visible;
+  }
+  .introPlanHead02Item {
+    width: 268px;
+    height: 228px;
+    text-align: center;
+    padding: 50px 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    img {
+      margin: 10px auto 0;
+      width: 80px;
+      aspect-ratio: 1/1;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .introWhatDifferent {
+    padding: 60px 20px;
+  }
+
+  .introRecord {
+    padding: 60px 20px;
+  }
+  .introRecordList li {
+    margin: 0 0 27px 36px;
+  }
+  .introRecordList li::before {
+    width: 24px;
+    height: 24px;
+    line-height: 1.6;
+    font-size: 14px;
+  }
+}
+@media (max-width: 640px) {
+  .introWhatDifferentBox {
+    width: calc(100vw - 20px);
+    /* margin-left: -20px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    /* margin: 0; */
+  }
+  .introWhatTextBox {
+    height: 380px;
+    padding: 96px 20px 0;
+  }
+  .introPlanHead02 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .introPlanHead02Item {
+      width: 200px;
+    }
+  }
+}

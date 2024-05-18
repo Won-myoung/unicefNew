@@ -1,0 +1,174 @@
+@import url("./colorVaration.css");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+.uniBotton {
+  margin: 0;
+  padding: 0;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+/* start */
+
+.header {
+  max-width: 1120px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  /* position: fixed; */
+}
+
+.header a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+}
+.removeMenu a {
+  margin-right: 30px;
+}
+
+.header a:hover {
+  color: var(--color-mainBlue);
+}
+.uniBotton {
+  margin-right: 100px;
+}
+.uniBotton img {
+  display: block;
+}
+.sponsoring {
+  margin-left: auto;
+  background-color: rgb(255, 220, 14);
+  width: 182px;
+  height: 75px;
+  text-align: center;
+  line-height: 70px;
+}
+.burgerIcon {
+  width: 30px;
+  /* 아이콘의 너비 */
+  height: 20px; /* 아이콘의 높이 */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; /* 세로 방향으로 아이콘을 공간을 균등하게 배치 */
+  cursor: pointer; /* 클릭 가능한 아이콘으로 설정 */
+  height: 75px;
+  width: 75px;
+  padding: 28px;
+  border: none;
+  background-color: var(--color-mainBlue);
+  transition: all 0.3s;
+  display: none;
+}
+.burgerIcon:hover {
+  background-color: #374ea2;
+}
+
+.burgerIcon .line {
+  border-radius: 10px;
+  width: 25px; /* 선의 너비 */
+  height: 3px; /* 선의 높이 */
+  background-color: var(--color-white); /* 선의 색상 */
+}
+.doingMenuSpread,
+.giveMenuSpread,
+.introduceMenuSpread {
+  max-width: 1120px;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 20px 20px;
+  border-top: 1px solid gray;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 115px;
+  display: none;
+  z-index: 999;
+}
+
+.doingMenuSpread > ul,
+.giveMenuSpread > ul,
+.introduceMenuSpread > ul {
+  margin: 0;
+  .boldClass {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+}
+.doingMenuSpread li,
+.giveMenuSpread li,
+.introduceMenuSpread li {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.doingMenuSpread li:hover,
+.giveMenuSpread li:hover,
+.introduceMenuSpread li:hover {
+  color: var(--color-mainBlue);
+}
+
+.doingMenuSpread > ul > li:first-child,
+.giveMenuSpread > ul > li:first-child,
+.introduceMenuSpread > ul > li:first-child {
+  margin-top: 20px;
+}
+
+.doingMenuButton.active,
+.giveMenuButton.active,
+.introduceMenuButton.active {
+  color: #1cabe2;
+}
+
+li {
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .removeMenu {
+    display: none;
+  }
+  .header {
+    height: 70px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .uniBotton {
+    margin-right: 30px;
+  }
+  /*   .removeMenu a {
+    margin-right: 14px;
+  } */
+  .uniBotton img {
+    width: 140px;
+  }
+  .burgerIcon {
+    display: flex;
+  }
+}
+
+@media (max-width: 800px) {
+  /* .removeMenu {
+    display: none;
+  } */
+}
+
+@media (max-width: 640px) {
+  .uniBotton img {
+    width: 113px;
+  }
+}

@@ -1,0 +1,42 @@
+.mainCover01 .mainCoverItem {
+  max-height: 900px;
+  img {
+    display: block;
+    height: 900px;
+    width: 100vw;
+  }
+}
+
+.mainCover02 {
+  display: none;
+  width: 100vw;
+  border: 20x solid red;
+  .mainCoverItem {
+    width: 100%;
+    > img {
+      object-fit: cover;
+    }
+  }
+}
+@media (max-width: 640px) {
+  .mainCover01 {
+    display: none;
+  }
+  .mainCover02 {
+    display: block;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: white;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  width: 40px;
+  border-radius: 10px;
+}
+.swiper-pagination-bullet-active {
+  background-color: white;
+}

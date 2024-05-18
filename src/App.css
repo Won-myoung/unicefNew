@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("./css/colorVaration.css");
+
+#root {
+  font-family: "Noto Sans KR", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+
+Header {
+  /* border: 2px solid red; */
+}
+
+.modal-bg {
+  background-color: var(--color-white);
+}
