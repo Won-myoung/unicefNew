@@ -22,9 +22,9 @@ import {
 
 export default function MainPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [selectedButton, setSelectedButton] = useState(null); // 상태 추가
+  const [selectedButton, setSelectedButton] = useState("button01"); // 상태 추가
   const [priceText, setPriceText] = useState("30,000원"); // 상태 추가
-  const [vaccineText, setVaccineText] = useState("DTP 예방백신 1,200회"); // 상태 추가
+  const [vaccineText, setVaccineText] = useState("DTP 예방백신 1,200회");
 
   useEffect(() => {
     const handleResize = () => {
@@ -139,8 +139,8 @@ export default function MainPage() {
   };
 
   //후원하기 금액 및 텍스트 교체
-  const priceSpan = document.getElementById("price");
-  const vaccinesSpan = document.getElementById("vaccines");
+  // const priceSpan = document.getElementById("price");
+  // const vaccinesSpan = document.getElementById("vaccines");
   const buttons = document.querySelectorAll("button");
 
   // 모든 버튼의 색상을 초기화
@@ -149,8 +149,9 @@ export default function MainPage() {
   });
 
   // 텍스트 변경
-  const handleButtonClick = (buttonNumber) => {
-    setSelectedButton(buttonNumber);
+  /*   const handleButtonClick = (buttonNumber) => {
+    // setSelectedButton(buttonNumber);
+    setSelectedButton(`button0${buttonNumber}`);
 
     if (buttonNumber === 1) {
       setPriceText("30,000원");
@@ -162,9 +163,44 @@ export default function MainPage() {
       setPriceText("100,000원");
       setVaccineText("콜레라 진단 키트 400개");
     }
-  };
+  }; */
+  //텍스트변경 두번째
+  const handleButtonClick = (buttonNumber) => {
+    setSelectedButton(buttonNumber);
 
-  //줄 생략.....
+    const prices = ["30,000원", "50,000원", "100,000원"];
+    const vaccineOptions = [
+      [
+        "영양상태 측정 테이프 12,000개",
+        "태양광램프 5개",
+        "고영양비스킷 2,880개",
+        "다회용 면 생리대 48세트",
+        "영양실조치료우유 144개",
+      ],
+      [
+        "농구공 120개",
+        "비누 1,200개",
+        "뇌수막염치료제/항생제 545병",
+        "콜레라 진단 키트 200개",
+        "다회용 면 생리대 80세트",
+      ],
+      [
+        "책가방 300개",
+        "말라리아 진단 키트 500개",
+        "고영양비스킷 9,600개",
+        "공책 800권",
+        "DTP 예방백신 4,000회",
+      ],
+    ];
+
+    const randomIndex = Math.floor(
+      Math.random() * vaccineOptions[buttonNumber - 1].length
+    );
+    const randomVaccine = vaccineOptions[buttonNumber - 1][randomIndex];
+
+    setPriceText(prices[buttonNumber - 1]); // 버튼 번호에 따라 가격 설정
+    setVaccineText(randomVaccine); // 랜덤하게 백신 정보 설정
+  };
 
   return (
     <>
@@ -269,7 +305,7 @@ export default function MainPage() {
                   <button
                     id="button01"
                     onClick={() => handleButtonClick(1)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === 1 ? "active" : ""}
+                    className={selectedButton === "button01" ? "active" : ""}
                   >
                     30,000원
                   </button>
@@ -278,7 +314,7 @@ export default function MainPage() {
                   <button
                     id="button02"
                     onClick={() => handleButtonClick(2)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === 2 ? "active" : ""}
+                    className={selectedButton === "button02" ? "active" : ""}
                   >
                     50,000원
                   </button>
@@ -287,7 +323,7 @@ export default function MainPage() {
                   <button
                     id="button03"
                     onClick={() => handleButtonClick(3)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === 3 ? "active" : ""}
+                    className={selectedButton === "button03" ? "active" : ""}
                   >
                     100,000원
                   </button>
@@ -424,10 +460,10 @@ export default function MainPage() {
                   height="272"
                   src="https://www.youtube.com/embed/j28UkZAxQJQ"
                   title=""
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               </div>
               <div className="mainChantSwiperBodyItem">
@@ -473,10 +509,10 @@ export default function MainPage() {
                   height="272"
                   src="https://www.youtube.com/embed/3vWCyEQnpWo"
                   title=""
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               </div>
               <div className="mainChantSwiperBodyItem">
@@ -522,10 +558,10 @@ export default function MainPage() {
                   height="272"
                   src="https://www.youtube.com/embed/rGIkyObj-0M"
                   title=""
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                 ></iframe>
               </div>
               <div className="mainChantSwiperBodyItem">

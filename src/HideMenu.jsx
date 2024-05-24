@@ -66,14 +66,14 @@ export default function HideMenu({ onClose }) {
           </Link>
 
           <div className="topIcons">
-            <Link to="/">
+            <Link to="/" onClick={onClose}>
               <img src="/homeBtn.png" alt="" className="homeBtn" />
             </Link>
             <Link to="">
               <img src="/searchBtn.png" alt="" className="searchBtn" />
             </Link>
             <button onClick={onClose}>
-              <img src="/xBtn.png" alt="" className="searchBtn" />
+              <img src="/xBtn.png" alt="" className="xBtn" />
             </button>
           </div>
         </div>
@@ -245,7 +245,6 @@ export default function HideMenu({ onClose }) {
                 )}
               </li>
 
-
               <li
                 className={`closeList boldClass ${
                   activeButton === "button5" || subMenu === "subMenu05"
@@ -290,7 +289,6 @@ export default function HideMenu({ onClose }) {
                   onClick={() => handleButtonClickSMenu("subMenu06", "menu6")}
                 >
                   소식
-                 
                 </div>
               </li>
 

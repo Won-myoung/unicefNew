@@ -37,14 +37,17 @@ ul {
   font-weight: bold;
   /* display: inline-block; */
 }
+.topMenu.active {
+  color: var(--color-mainBlue);
+}
+.topMenu:hover {
+  color: var(--color-mainBlue);
+}
 
 .removeMenu a {
   margin-right: 25px;
 }
 
-.header a:hover {
-  color: var(--color-mainBlue);
-}
 .uniMainButton {
   margin-right: 100px;
 }
@@ -140,22 +143,22 @@ ul {
   margin-top: 10px;
 }
 
-.doingMenuSpread li:hover,
-.giveMenuSpread li:hover,
-.introduceMenuSpread li:hover {
+.doingMenuSpread a:hover,
+.giveMenuSpread a:hover,
+.introduceMenuSpread a:hover {
+  /* color: var(--color-mainBlue); */
   color: var(--color-mainBlue);
+}
+.doingMenuSpread a,
+.giveMenuSpread a,
+.introduceMenuSpread a {
+  display: block;
 }
 
 .doingMenuSpread > ul > li:first-child,
 .giveMenuSpread > ul > li:first-child,
 .introduceMenuSpread > ul > li:first-child {
   margin-top: 20px;
-}
-
-.doingMenuButton.active,
-.giveMenuButton.active,
-.introduceMenuButton.active {
-  color: #1cabe2;
 }
 
 li {
