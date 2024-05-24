@@ -408,7 +408,6 @@ input[type="checkbox"]:checked::after {
   /* margin-top: 20px; */
 }
 
-
 @media (max-width: 990px) {
   .sponsorBody01 {
     flex-direction: column;
@@ -425,18 +424,7 @@ input[type="checkbox"]:checked::after {
   .sponsorBody03 {
     padding: 60px 20px;
   }
-  .sponsorMember {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 64px;
-    strong {
-      font-size: 18px;
-    }
-    p {
-      font-size: 14px;
-    }
-  }
+
   .sponsorMember01,
   .sponsorMember02 {
     display: flex;
@@ -477,5 +465,17 @@ input[type="checkbox"]:checked::after {
   }
   .sponsorBody05 > div > .people li {
     font-size: 14px;
+  }
+  .sponsorMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    strong {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
   }
 }

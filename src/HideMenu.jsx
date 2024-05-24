@@ -11,12 +11,15 @@ export default function HideMenu({ onClose }) {
   //메뉴 마우스 enter시 메뉴 바뀜
   useEffect(() => {
     const path = location.pathname;
-    if (path === "/") {
+    if (path === "/doing") {
       setActiveButton("button1");
+      setActiveMainMenu("menu1"); // 메뉴 버튼이 변경될 때 메인 메뉴의 상태를 초기화합니다.
     } else if (path === "/sponsor") {
       setActiveButton("button2");
+      // setActiveMainMenu("menu2");
     } else if (path === "/introduce") {
       setActiveButton("button3");
+      // setActiveMainMenu("menu3");
     }
   }, [location.pathname]);
 
@@ -24,7 +27,7 @@ export default function HideMenu({ onClose }) {
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
     if (buttonName === "button1") {
-      navigate("/");
+      navigate("/doing");
     } else if (buttonName === "button2") {
       navigate("/sponsor");
     } else if (buttonName === "button3") {
@@ -40,10 +43,19 @@ export default function HideMenu({ onClose }) {
   const [subMenu, setSubMenu] = useState("subMenu01");
   // 초기 상태는 'DoingSub01'
 
-  const handleButtonClickSMenu = (tab) => {
+  const handleButtonClickSMenu = (tab, menu) => {
+    if (activeMainMenu === menu) {
+      // 이미 열려 있는 메뉴를 다시 클릭한 경우 아무 변화도 일어나지 않도록 함
+      return;
+    }
     setSubMenu(tab);
+    setActiveMainMenu(activeMainMenu === menu ? null : menu);
+
     // 버튼을 누를 때마다 currentTab 상태 업데이트
   };
+
+  //메뉴 홧살표 넣기
+  const [activeMainMenu, setActiveMainMenu] = useState(null);
 
   return (
     <div className="hideMenu" /* onMouseLeave={handleMouseLeave} */>
@@ -54,7 +66,7 @@ export default function HideMenu({ onClose }) {
           </Link>
 
           <div className="topIcons">
-            <Link to="">
+            <Link to="/">
               <img src="/homeBtn.png" alt="" className="homeBtn" />
             </Link>
             <Link to="">
@@ -115,89 +127,202 @@ export default function HideMenu({ onClose }) {
         >
           <div className={`class1 ${activeButton === "button1" ? "show" : ""}`}>
             <ul>
-              <li className={`closeList boldClass `}>
-                <ul
-                  onClick={() => handleButtonClickSMenu("subMenu01")}
-                  className={subMenu === "subMenu01" ? "active" : ""}
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu1" ? "activeMainMenu" : ""
+                }`}
+              >
+                {" "}
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu01", "menu1")}
                 >
                   전세계 모든 어린이를 위해
-                  {subMenu === "subMenu01" && (
-                    <>
-                      <li>활동지역</li>
-                      <li>스쿨스 포 아시아</li>
-                      <li>#OnMyMind</li>
-                    </>
-                  )}
-                </ul>
+                  <img
+                    src={
+                      activeMainMenu === "menu1"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu1" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu01" && (
+                  <ul className="subMenu">
+                    <li>활동지역</li>
+                    <li>스쿨스 포 아시아</li>
+                    <li>#OnMyMind</li>
+                  </ul>
+                )}
               </li>
-              <li className={`closeList boldClass `}>
-                <ul
-                  onClick={() => handleButtonClickSMenu("subMenu02")}
-                  className={subMenu === "subMenu02" ? "active" : ""}
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu2" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu02", "menu2")}
                 >
-                  차별없는 구호
-                  {subMenu === "subMenu02" && (
-                    <>
-                      <li>생존과 발달</li>
-                      <li>교육</li>
-                      <li>보호</li>
-                      <li>안전하고 지속 가능한 환경</li>
-                      <li>공평한 기회</li>
-                    </>
-                  )}
-                </ul>
+                  차별 없는 구호
+                  <img
+                    src={
+                      activeMainMenu === "menu2"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu2" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu02" && (
+                  <ul className="subMenu">
+                    <li>생존과 발달</li>
+                    <li>교육</li>
+                    <li>보호</li>
+                    <li>안전하고 지속 가능한 환경</li>
+                    <li>공평한 기회</li>
+                  </ul>
+                )}
               </li>
-              <li className={`closeList boldClass `}>
-                <ul
-                  onClick={() => handleButtonClickSMenu("subMenu03")}
-                  className={subMenu === "subMenu03" ? "active" : ""}
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu3" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu03", "menu3")}
                 >
                   어린이 삶 개선
-                  {subMenu === "subMenu03" && (
-                    <>
-                      <li>기후위기 대응</li>
-                      <li>이노베이션</li>
-                      <li>성 평등</li>
-                      <li>장애 어린이</li>
-                      <li>조사와 연구</li>
-                    </>
-                  )}
-                </ul>
+                  <img
+                    src={
+                      activeMainMenu === "menu3"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu3" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu03" && (
+                  <ul className="subMenu">
+                    <li>기후위기 대응</li>
+                    <li>이노베이션</li>
+                    <li>성 평등</li>
+                    <li>장애 어린이</li>
+                    <li>조사와 연구</li>
+                  </ul>
+                )}
               </li>
-              <li className={`closeList boldClass `}>
-                <ul
-                  onClick={() => handleButtonClickSMenu("subMenu04")}
-                  className={subMenu === "subMenu04" ? "active" : ""}
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu4" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu04", "menu4")}
                 >
                   긴급구호
-                  {subMenu === "subMenu04" && (
-                    <>
-                      <li>코로나19와 백신</li>
-                      <li>인도주의 지원</li>
-                      <li>난민 어린이</li>
-                    </>
-                  )}
-                </ul>
+                  <img
+                    src={
+                      activeMainMenu === "menu4"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu4" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu04" && (
+                  <ul className="subMenu">
+                    <li>코로나19와 백신</li>
+                    <li>인도주의 지원</li>
+                    <li>난민 어린이</li>
+                  </ul>
+                )}
               </li>
-              <li className={`closeList boldClass `}>
-                <ul
-                  onClick={() => handleButtonClickSMenu("subMenu05")}
-                  className={subMenu === "subMenu05" ? "active" : ""}
+
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button5" || subMenu === "subMenu05"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu05", "menu5")}
                 >
                   한국 아동권리 증진
-                  {subMenu === "subMenu05" && (
-                    <>
-                      <li>아동권리협약 이행</li>
-                      <li>정책 개선 활동</li>
-                      <li>아동친화사회 만들기</li>
-                      <li>권리 교육</li>
-                    </>
-                  )}
-                </ul>
+                  <img
+                    src={
+                      activeMainMenu === "menu5"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu5" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu05" && (
+                  <ul className="subMenu">
+                    <li>아동권리협약 이행</li>
+                    <li>정책 개선 활동</li>
+                    <li>아동친화사회 만들기</li>
+                    <li>권리 교육</li>
+                  </ul>
+                )}
               </li>
-              <li className={`closeList boldClass `}>소식</li>
-              <li className={`closeList boldClass `}>자료실</li>
-              <li className={`closeList boldClass `}>한국 정부 협력</li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button6" || subMenu === "subMenu06"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu06", "menu6")}
+                >
+                  소식
+                 
+                </div>
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button7" || subMenu === "subMenu07"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu07", "menu7")}
+                >
+                  자료실
+                </div>
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button8" || subMenu === "subMenu08"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu08", "menu8")}
+                >
+                  한국 정부 협력
+                </div>
+              </li>
             </ul>
           </div>
 

@@ -5,9 +5,13 @@
   margin: 0;
   padding: 0;
 }
-.uniBotton {
+.uniMainButton {
   margin: 0;
   padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
 
 li,
@@ -26,24 +30,25 @@ ul {
   /* position: fixed; */
 }
 
-.header a {
+.topMenu {
   font-size: 20px;
   text-decoration: none;
   color: black;
   font-weight: bold;
-  display: inline-block;
+  /* display: inline-block; */
 }
+
 .removeMenu a {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 
 .header a:hover {
   color: var(--color-mainBlue);
 }
-.uniBotton {
+.uniMainButton {
   margin-right: 100px;
 }
-.uniBotton img {
+.uniMainButton img {
   display: block;
 }
 .sponsoring {
@@ -51,9 +56,17 @@ ul {
   background-color: rgb(255, 220, 14);
   width: 182px;
   height: 75px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
   line-height: 70px;
+  transition: all 0.3s;
 }
+.sponsoring:hover {
+  color: black !important;
+  background-color: #ffc20e;
+}
+
 .burgerIcon {
   width: 30px;
   /* 아이콘의 너비 */
@@ -77,14 +90,19 @@ ul {
 
 .burgerIcon .line {
   border-radius: 10px;
-  width: 25px; /* 선의 너비 */
-  height: 3px; /* 선의 높이 */
-  background-color: var(--color-white); /* 선의 색상 */
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+.spreadBg {
+  width: 100%;
+  height: auto;
+  border: 2px solid blue;
 }
 .doingMenuSpread,
 .giveMenuSpread,
 .introduceMenuSpread {
-  max-width: 1120px;
+  width: 100%;
   margin: 0 auto;
   gap: 50px;
   padding: 20px 20px;
@@ -101,7 +119,13 @@ ul {
 .doingMenuSpread > ul,
 .giveMenuSpread > ul,
 .introduceMenuSpread > ul {
-  margin: 0;
+  display: flex;
+  max-width: 1120px;
+  flex-grow: 1;
+  gap: 50px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* margin: 0; */
   .boldClass {
     font-size: 16px;
     font-weight: 600;
@@ -147,13 +171,13 @@ li {
     padding: 0;
     overflow: hidden;
   }
-  .uniBotton {
+  .uniMainButton {
     margin-right: 30px;
   }
   /*   .removeMenu a {
     margin-right: 14px;
   } */
-  .uniBotton img {
+  .uniMainButton img {
     width: 140px;
   }
   .burgerIcon {
@@ -161,14 +185,8 @@ li {
   }
 }
 
-@media (max-width: 800px) {
-  /* .removeMenu {
-    display: none;
-  } */
-}
-
 @media (max-width: 640px) {
-  .uniBotton img {
+  .uniMainButton img {
     width: 113px;
   }
 }

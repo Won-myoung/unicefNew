@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <Header toggleHideMenu={toggleHideMenu} />
         <Routes>
-          <Route path="/" element={<MainPage />} />{" "}
+          <Route path="/" element={<MainPage />} />
           <Route path="/doing" element={<Doing />} />
           <Route path="/sponsor" element={<Sponsor />} />
           <Route path="/introduce" element={<Introduce />} />

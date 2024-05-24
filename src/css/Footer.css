@@ -5,7 +5,8 @@ ul {
 }
 /* start */
 .footer {
-  background-color: #e7eaec;
+  /* background-color: #e7eaec; */
+  background-color: rgb(248, 249, 250);
   padding: 46px 20px;
   font-size: 14px;
   color: #828385;

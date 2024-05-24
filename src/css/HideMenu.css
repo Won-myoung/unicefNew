@@ -103,6 +103,7 @@
 .menuListRight {
   font-size: 14px;
   padding: 20px;
+  width: 100%;
 }
 .menuListRight > div {
   display: none;
@@ -123,7 +124,30 @@
 .closeList.boldClass > ul > li.active {
   display: block;
 }
-
+.MainMenu {
+  color: #1cabe2;
+  border: 2px solid red;
+}
+.subMenu > li:hover {
+  color: #1cabe2;
+}
+.subMenu01 {
+  border: 2px solid red;
+}
+.menuListRight {
+  /* width: 100%; */
+}
+.arrowIcon {
+  height: 10px;
+  float: right;
+  margin-top: 10px;
+}
+.boldClass.activeMainMenu {
+  color: #1cabe2;
+  .subMenu {
+    color: black;
+  }
+}
 @media (max-width: 640px) {
   .receiptBtn {
     font-size: 16px;

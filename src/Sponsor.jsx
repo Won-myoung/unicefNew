@@ -18,7 +18,7 @@ import BgBar from "./pages/BgBar";
 
 function Sponsor() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [swiperInstance, setSwiperInstance] = useState(null);
+  // const [swiperInstance, setSwiperInstance] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
