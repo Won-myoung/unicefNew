@@ -104,72 +104,88 @@
 /* -----------------------04 -------------------------*/
 .sponsorBody04 {
   display: flex;
+  flex-direction: column;
   background-color: var(--color-lightBlue);
-  overflow: auto;
-
-  justify-content: center;
-}
-@media (max-width: 700px) {
-  .sponsorBody04 {
-    justify-content: left;
+  padding: 120px 0;
+  /* border: 2px solid red; */
+  > .swiper-slide {
+    padding: 0;
+    margin: 0;
   }
 }
-.sponsorBody04 > div {
+.sponsorBody04Wrap {
+  /* border: 2px solid blue; */
   max-width: 1120px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: 120px 20px;
-  min-width: 700px;
-  box-sizing: border-box;
+  /* align-items: center; */
+  width: 100%;
+  padding: 0 20px 40px;
 }
-.sponsorBody04 > div > h2 {
-  margin-bottom: 64px;
+.sponsorBody04Wrap h2 {
+  margin-bottom: 80px;
 }
 
-.sponsorClub {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  overflow: auto;
-  gap: 20px;
+.sponsorBody04 .sponsorBody04Wrap .mySwiper {
+  /* border: 2px solid red; */
 }
-.sponsorClub > div {
+
+.sponsorBody04 .sponsorBody04Wrap .mySwiper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.sponsorBody04 .sponsorBody04Wrap .mySwiper .sponsorClubItem {
   display: flex;
   flex-direction: column;
-}
-.sponsorClub > div > img {
-  width: 80px;
-}
-.sponsorClub strong {
-  font-size: 20px;
-  margin: 16px 0 8px;
-  color: var(--color-mainBlue);
-}
-.sponsorClub p {
-  font-size: 16px;
+  max-width: 340px;
+  padding: 0 40px 0 0;
+
+  > strong {
+    font-size: 20px;
+    color: var(--color-mainBlue);
+    margin: 16px 0 8px;
+  }
+  > img {
+    width: 80px;
+    aspect-ratio: 1/1;
+  }
+  > p {
+    font-size: 16px;
+  }
 }
 
-/* 스크롤바 스타일 */
-.sponsorBody04::-webkit-scrollbar {
-  width: 8px; /* 스크롤바 너비 조절 */
-  height: 8px; /* 세로 스크롤바 높이 조절 */
+.sponsorBody04 {
+  .swiper-scrollbar-drag {
+    background-color: var(--color-mainBlue);
+  }
 }
+/* .sponsorBody04 .sponsorBody04Wrap .mySwiper {
+  margin-bottom: -100px;
+  padding-bottom: -100px;
+} */
+@media (max-width: 990px) {
+  .sponsorBody04 .sponsorBody04Wrap .mySwiper .sponsorClubItem {
+    width: 300px;
+    padding: 0 20px 0 0;
 
-/* 스크롤바 Track(스크롤바 바탕부분) 스타일 */
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
+    strong {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 640px) {
+    .sponsorBody04 .swiper-scrollbar {
+      margin-bottom: 0;
+    }
+  }
 }
-
-/* 스크롤바 Thumb(스크롤바를 잡는 부분) 스타일 */
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-mainBlue); /* 스크롤바 색상 */
-  border-radius: 4px; /* 스크롤바 모서리 둥글게 */
-}
-
-/* 스크롤바 활성화 상태 Thumb 스타일 */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #0056b3; /* 스크롤바 Hover 시 색상 */
-}
-
 /* -------------------------------05 ---------------------------------*/
 .sponsorBody05 {
   display: flex;
@@ -346,38 +362,36 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-/* swiper swiper swiper swiper swiper swiper swiper swiper swiper */
+/* body09  */
 .sponsorBody09 {
   max-width: 1120px;
   margin: 0 auto;
-  overflow: hidden;
-  padding-bottom: 60px;
-  margin-bottom: 60px;
+  /* overflow: hidden; */
+  padding: 100px 0;
+  /* margin-bottom: 60px; */
 }
-.swiper {
+.sponsorBody09 h2 {
+  margin-bottom: 96px;
+}
+
+/* .sponsorBody09 .swiper {
   position: relative;
-  width: 100%;
-  /* height: calc(100% + 30px); */
-  height: auto;
-  overflow: visible;
+  padding-bottom: 20px;
+} */
+.sponsorBody09 .swiper-scrollbar {
+  /* position: absolute; */
+  bottom: 0;
+  margin-bottom: 30px;
+}
+.sponsorBody09 .swiper-scrollbar-drag {
+  background-color: var(--color-mainBlue);
+}
+.sponsorBody09 .mySwiper {
+  overflow: hidden;
+  padding-bottom: 30px;
 }
 
-.swiper-slide {
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  object-fit: cover;
-}
-
-.newsGroup {
+.sponsorBody09 .newsGroup {
   max-width: 100%;
   margin: 0 10px 20px;
   > img {
@@ -392,20 +406,45 @@ input[type="checkbox"]:checked::after {
     -webkit-line-clamp: 2; /* 최대 두 줄까지 표시합니다. */
   }
 }
+/* swiper css */
 
-.swiper-scrollbar {
-  /* max-width: calc(100% - 110px); */
-  /* max-width: 100%; */
+/* media query 필요 */
+.sponsorBody09 .swiper-scrollbar {
+  width: calc(100% - 180px);
   /* border: 2px solid red; */
-  margin-top: 100px;
-  /* padding-top: 10px; */
 }
-.swiper-scrollbar-drag {
-  background-color: var(--color-mainBlue);
-  /* max-width: 80%; */
-  max-width: 100%;
+.sponsorBody09 .swiper-button-next,
+.sponsorBody09 .swiper-button-prev {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px 0 rgb(177, 177, 177);
+  background-color: white;
+}
+
+.sponsorBody09 .swiper-button-prev::after,
+.sponsorBody09 .swiper-button-next::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(/public/main/swiperArrowRight.png) no-repeat center
+    center/contain;
+}
+.sponsorBody09 .swiper-button-prev::after {
+  background-image: url(/public/main/swiperArrowLeft.png);
+}
+.sponsorBody09 .swiper-button-next {
   position: relative;
-  /* margin-top: 20px; */
+  margin-left: auto;
+  top: 25px;
+  left: -20px;
+}
+.sponsorBody09 .swiper-button-prev {
+  position: relative;
+  margin-left: auto;
+  top: 60px;
+  left: -90px;
 }
 
 @media (max-width: 990px) {
@@ -446,7 +485,18 @@ input[type="checkbox"]:checked::after {
   }
   .sponsorBody09 .newsGroup strong {
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.7;
+  }
+  .sponsorBody09 .swiper {
+    padding: 0 0 40px 0;
+  }
+  .sponsorBody09 .swiper-scrollbar {
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  .sponsorBody09 .swiper-button-next,
+  .sponsorBody09 .swiper-button-prev {
+    display: none;
   }
 }
 @media (max-width: 640px) {
@@ -457,7 +507,7 @@ input[type="checkbox"]:checked::after {
     display: none;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .sponsorBody05 > div > .people li img {
     max-width: 266px;
     width: 100%;
@@ -477,5 +527,12 @@ input[type="checkbox"]:checked::after {
     p {
       font-size: 14px;
     }
+  }
+  .sponsorBody09 .swiper {
+    /* position: relative; */
+  }
+  .sponsorBody09 .swiper .swiper-scrollbar {
+    /* position: absolute; */
+    /* bottom: -20px; */
   }
 }

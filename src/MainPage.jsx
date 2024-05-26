@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./css/mainPage.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 
-import "./css/mainPage.css";
+// import "./css/mainPage.module.css";
 
 // import required modules
 import {
@@ -148,7 +149,7 @@ export default function MainPage() {
     button.classList.remove("active");
   });
 
-  // 텍스트 변경
+  // 텍스트 변경 하나의 아이템 고정
   /*   const handleButtonClick = (buttonNumber) => {
     // setSelectedButton(buttonNumber);
     setSelectedButton(`button0${buttonNumber}`);
@@ -164,42 +165,98 @@ export default function MainPage() {
       setVaccineText("콜레라 진단 키트 400개");
     }
   }; */
-  //텍스트변경 두번째
-  const handleButtonClick = (buttonNumber) => {
-    setSelectedButton(buttonNumber);
 
-    const prices = ["30,000원", "50,000원", "100,000원"];
-    const vaccineOptions = [
-      [
-        "영양상태 측정 테이프 12,000개",
-        "태양광램프 5개",
-        "고영양비스킷 2,880개",
-        "다회용 면 생리대 48세트",
-        "영양실조치료우유 144개",
-      ],
-      [
-        "농구공 120개",
-        "비누 1,200개",
-        "뇌수막염치료제/항생제 545병",
-        "콜레라 진단 키트 200개",
-        "다회용 면 생리대 80세트",
-      ],
-      [
-        "책가방 300개",
-        "말라리아 진단 키트 500개",
-        "고영양비스킷 9,600개",
-        "공책 800권",
-        "DTP 예방백신 4,000회",
-      ],
-    ];
+  //텍스트변경 두번째 복수 아이템 랜덤
+  // const handleButtonClick = (buttonNumber) => {
+  //   setSelectedButton(buttonNumber);
 
-    const randomIndex = Math.floor(
-      Math.random() * vaccineOptions[buttonNumber - 1].length
-    );
-    const randomVaccine = vaccineOptions[buttonNumber - 1][randomIndex];
+  //   const prices = ["30,000원", "50,000원", "100,000원"];
+  //   const vaccineOptions = [
+  //     [
+  //       "영양상태 측정 테이프 12,000개",
+  //       "태양광램프 5개",
+  //       "고영양비스킷 2,880개",
+  //       "다회용 면 생리대 48세트",
+  //       "영양실조치료우유 144개",
+  //     ],
+  //     [
+  //       "농구공 120개",
+  //       "비누 1,200개",
+  //       "뇌수막염치료제/항생제 545병",
+  //       "콜레라 진단 키트 200개",
+  //       "다회용 면 생리대 80세트",
+  //     ],
+  //     [
+  //       "책가방 300개",
+  //       "말라리아 진단 키트 500개",
+  //       "고영양비스킷 9,600개",
+  //       "공책 800권",
+  //       "DTP 예방백신 4,000회",
+  //     ],
+  //   ];
 
-    setPriceText(prices[buttonNumber - 1]); // 버튼 번호에 따라 가격 설정
-    setVaccineText(randomVaccine); // 랜덤하게 백신 정보 설정
+  //   const randomIndex = Math.floor(
+  //     Math.random() * vaccineOptions[buttonNumber - 1].length
+  //   );
+  //   const randomVaccine = vaccineOptions[buttonNumber - 1][randomIndex];
+
+  //   setPriceText(prices[buttonNumber - 1]);
+  //   // 버튼 번호에 따라 가격 설정
+  //   setVaccineText(randomVaccine);
+  //   // 랜덤하게 백신 정보 설정
+  // };
+
+  //버튼 색 유지 및 텍스트 랜덤교체
+
+  // 랜덤한 백신 정보들
+  const vaccineOptions = [
+    [
+      "DTP 예방백신 1,200회",
+      "다테토스 백신 300회",
+      "폴리오 예방백신 700회",
+      "BCG 예방백신 500회",
+    ],
+    [
+      "인플루엔자 백신 1,000회",
+      "수두 예방백신 400회",
+      "홍역 예방백신 800회",
+      "수막구균 예방백신 600회",
+    ],
+    [
+      "티푸스 백신 600회",
+      "파상풍 백신 900회",
+      "장티푸스 백신 400회",
+      "말라리아 백신 200회",
+    ],
+  ];
+
+  // 버튼 클릭 핸들러 함수
+  const handleButtonClick = (buttonId) => {
+    setSelectedButton(buttonId); // 선택된 버튼 업데이트
+
+    // 각 버튼에 맞는 가격과 랜덤한 백신 정보 설정
+    switch (buttonId) {
+      case 1:
+        setPriceText("30,000원");
+        setVaccineText(getRandomVaccineText(vaccineOptions[0]));
+        break;
+      case 2:
+        setPriceText("50,000원");
+        setVaccineText(getRandomVaccineText(vaccineOptions[1]));
+        break;
+      case 3:
+        setPriceText("100,000원");
+        setVaccineText(getRandomVaccineText(vaccineOptions[2]));
+        break;
+      default:
+        break;
+    }
+  };
+
+  // 랜덤한 백신 정보 반환 함수
+  const getRandomVaccineText = (options) => {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
   };
 
   return (
@@ -211,7 +268,7 @@ export default function MainPage() {
             delay: 3000,
             disableOnInteraction: true,
           }}
-          // loop={true}
+          loop={true}
           navigation={true}
           modules={[Pagination, Navigation, Autoplay]}
           className="mainCover01"
@@ -305,7 +362,7 @@ export default function MainPage() {
                   <button
                     id="button01"
                     onClick={() => handleButtonClick(1)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === "button01" ? "active" : ""}
+                    className={selectedButton === 1 ? "active" : ""}
                   >
                     30,000원
                   </button>
@@ -314,7 +371,7 @@ export default function MainPage() {
                   <button
                     id="button02"
                     onClick={() => handleButtonClick(2)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === "button02" ? "active" : ""}
+                    className={selectedButton === 2 ? "active" : ""}
                   >
                     50,000원
                   </button>
@@ -323,7 +380,7 @@ export default function MainPage() {
                   <button
                     id="button03"
                     onClick={() => handleButtonClick(3)} // 버튼 클릭 핸들러 연결
-                    className={selectedButton === "button03" ? "active" : ""}
+                    className={selectedButton === 3 ? "active" : ""}
                   >
                     100,000원
                   </button>

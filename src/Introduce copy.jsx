@@ -2,6 +2,18 @@ import { useEffect, useState } from "react";
 import "./css/introduce.css";
 import BgBar from "./pages/BgBar";
 
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/scrollbar";
+import "./css/introduce.css";
+
+// import required modules
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
+
 export default function Introduce() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -269,43 +281,50 @@ export default function Introduce() {
               유니세프 중점 사업 계획
             </h4>
           </div>
-          <ul>
-            <li>
+          <Swiper
+            slidesPerView={"auto"}
+            spaceBetween={15}
+            freeMode={true}
+            scrollbar={true}
+            modules={[FreeMode, Scrollbar]}
+            className="mySwiper"
+          >
+            <SwiperSlide className="introPlanItem">
               <a href="" style={{ fontSize: calculateFontSize2016() }}>
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission01.png" alt="" />
               </a>
-            </li>
-            <li>
+            </SwiperSlide>
+            <SwiperSlide className="introPlanItem">
               <a href="" style={{ fontSize: calculateFontSize2016() }}>
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission02.png" alt="" />
               </a>
-            </li>
-            <li>
+            </SwiperSlide>
+            <SwiperSlide className="introPlanItem">
               <a href="" style={{ fontSize: calculateFontSize2016() }}>
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission03.png" alt="" />
               </a>
-            </li>
-            <li>
+            </SwiperSlide>
+            <SwiperSlide className="introPlanItem">
               <a href="" style={{ fontSize: calculateFontSize2016() }}>
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission04.png" alt="" />
               </a>
-            </li>
-            <li>
+            </SwiperSlide>
+            <SwiperSlide className="introPlanItem">
               <a href="" style={{ fontSize: calculateFontSize2016() }}>
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission05.png" alt="" />
               </a>
-            </li>
-          </ul>
+            </SwiperSlide>
+          </Swiper>
           <div className="introPlanHead02">
             <h4 style={{ fontSize: calculateFontSize2016() }}>범분야 사업</h4>
             <ul>

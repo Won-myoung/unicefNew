@@ -19,3 +19,7 @@ Header {
 .modal-bg {
   background-color: var(--color-white);
 }
+
+body {
+  overflow-x: hidden;
+}

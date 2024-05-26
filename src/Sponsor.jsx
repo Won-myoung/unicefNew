@@ -12,7 +12,13 @@ import "swiper/css/scrollbar";
 import "./css/sponsor.css";
 
 // import required modules
-import { Navigation, Scrollbar } from "swiper/modules";
+import {
+  FreeMode,
+  Grid,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
 
 import BgBar from "./pages/BgBar";
 
@@ -42,6 +48,7 @@ function Sponsor() {
       return 2;
     }
   };
+
   /* width로 990px이하 <br/> 추가,줄바꿈 */
   const slidesPerView = calculateSlidesPerView();
   const shouldAddLineBreak = windowWidth > 990;
@@ -62,6 +69,7 @@ function Sponsor() {
     // 폰트 크기를 반환합니다.
     return `${fontSize}px`;
   };
+
   return (
     <div className="sponsor">
       <BgBar />
@@ -129,60 +137,74 @@ function Sponsor() {
         </div>
       </div>
       <div className="sponsorBody04">
-        <div>
+        <div className="sponsorBody04Wrap">
           <h2 style={{ fontSize: calculateFontSize() }}>
             유니세프 아너스클럽 회원이 되시면
           </h2>
-          <div className="sponsorClub">
-            <div>
+          <Swiper
+            slidesPerView={"auto"}
+            grid={{
+              rows: 2,
+              fill: "row",
+            }}
+            spaceBetween={15}
+            freeMode={true}
+            scrollbar={{ draggable: true }}
+            // pagination={{ clickable: true }}
+            pagination={false}
+            /*             breakpoints={{
+              640: {
+                slidesPerView: 3,
+                grid: {
+                  rows: 2,
+                },
+                freeMode: true,
+                spaceBetween: 15,
+              },
+            }} */
+            modules={[Grid, Pagination, FreeMode, Scrollbar]}
+            className="mySwiper"
+          >
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club01.png" alt="" />
               <strong>유니세프 사업 현장 방문</strong>
               <p>
                 내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
                 변화를 눈으로 확인하실 수 있습니다.
               </p>
-            </div>
-            <div>
+            </SwiperSlide>
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club02.png" alt="" />
-              <strong>유니세프 사업 현장 방문</strong>
+              <strong>유니세프 활동 보고서 제공</strong>
               <p>
-                내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
-                변화를 눈으로 확인하실 수 있습니다.
+                유니세프의 활동과 성과에 대한 보고서를 제공받아 후원금의 사용
+                내역을 확인할 수 있습니다.
               </p>
-            </div>
-            <div>
+            </SwiperSlide>
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club03.png" alt="" />
-              <strong>유니세프 사업 현장 방문</strong>
+              <strong>유니세프 소식지 발송</strong>
               <p>
-                내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
-                변화를 눈으로 확인하실 수 있습니다.
+                유니세프의 최신 소식과 활동 내용을 담은 소식지를 정기적으로
+                받아볼 수 있습니다.
               </p>
-            </div>
-            <div>
+            </SwiperSlide>
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club04.png" alt="" />
-              <strong>유니세프 사업 현장 방문</strong>
-              <p>
-                내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
-                변화를 눈으로 확인하실 수 있습니다.
-              </p>
-            </div>
-            <div>
+              <strong>유니세프 캠페인 초청</strong>
+              <p>유니세프가 주최하는 다양한 캠페인과 행사에 초청됩니다.</p>
+            </SwiperSlide>
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club05.png" alt="" />
-              <strong>유니세프 사업 현장 방문</strong>
-              <p>
-                내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
-                변화를 눈으로 확인하실 수 있습니다.
-              </p>
-            </div>
-            <div>
+              <strong>기념품 제공</strong>
+              <p>후원 감사의 의미로 유니세프 기념품이 제공됩니다.</p>
+            </SwiperSlide>
+            <SwiperSlide className="sponsorClubItem">
               <img src="/club06.png" alt="" />
-              <strong>유니세프 사업 현장 방문</strong>
-              <p>
-                내 후원금이 쓰이는 현장을 찾아 직접 어린이들을 만나고, 그로 인한
-                변화를 눈으로 확인하실 수 있습니다.
-              </p>
-            </div>
-          </div>
+              <strong>후원 증서 발급</strong>
+              <p>후원자로서의 감사와 자부심을 담은 후원 증서가 발급됩니다.</p>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div className="sponsorBody05">
@@ -329,15 +351,19 @@ function Sponsor() {
       </div>
 
       <div className="sponsorBody09">
+        <div>
+          <h2 style={{ fontSize: calculateFontSize() }}>최근 소식</h2>
+        </div>
         <Swiper
           spaceBetween={10}
           slidesPerView={slidesPerView}
           freeMode={false}
-          loop={true}
-          navigation={false}
-          scrollbar={{
-            hide: false,
-          }}
+          loop={false}
+          navigation={true}
+          // scrollbar={{
+          //   hide: false,
+          // }}
+          scrollbar={true}
           /* start */
 
           // autoHeight={true} // 현재 활성 슬라이드높이 맞게 높이조정

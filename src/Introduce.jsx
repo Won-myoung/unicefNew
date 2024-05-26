@@ -283,10 +283,11 @@ export default function Introduce() {
           </div>
           <Swiper
             slidesPerView={"auto"}
+            grid={2}
             spaceBetween={15}
             freeMode={true}
             scrollbar={true}
-            modules={[FreeMode, /* Pagination */ Scrollbar]}
+            modules={[FreeMode, Scrollbar]}
             className="mySwiper"
           >
             <SwiperSlide className="introPlanItem">
@@ -315,6 +316,13 @@ export default function Introduce() {
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission04.png" alt="" />
+              </a>
+            </SwiperSlide>
+            <SwiperSlide className="introPlanItem">
+              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+                모든 어린이의 <br />
+                <span>생존과 발달</span>
+                <img src="/introduce/mission05.png" alt="" />
               </a>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">

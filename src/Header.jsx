@@ -80,6 +80,7 @@ function Header() {
             location.pathname === "/doing" ? "active" : ""
           } topMenu`}
           onMouseEnter={handleDoingMenuEnter}
+          onClick={handleMenuClick}
         >
           하는 일
         </Link>
@@ -194,6 +195,7 @@ function Header() {
             location.pathname === "/sponsor" ? "active" : ""
           } topMenu`}
           onMouseEnter={handleGiveMenuEnter}
+          onClick={handleMenuClick}
         >
           후원과 참여
         </Link>
@@ -288,6 +290,7 @@ function Header() {
             location.pathname === "/introduce" ? "active" : ""
           } topMenu`}
           onMouseEnter={handleIntroduceMenuEnter}
+          onClick={handleMenuClick}
         >
           유니세프 소개
         </Link>

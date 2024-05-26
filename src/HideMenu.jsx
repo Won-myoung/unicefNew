@@ -13,7 +13,8 @@ export default function HideMenu({ onClose }) {
     const path = location.pathname;
     if (path === "/doing") {
       setActiveButton("button1");
-      setActiveMainMenu("menu1"); // 메뉴 버튼이 변경될 때 메인 메뉴의 상태를 초기화합니다.
+      setActiveMainMenu("menu1");
+      // 메뉴 버튼이 변경될 때 메인 메뉴의 상태를 초기화합니다.
     } else if (path === "/sponsor") {
       setActiveButton("button2");
       // setActiveMainMenu("menu2");
@@ -132,7 +133,6 @@ export default function HideMenu({ onClose }) {
                   activeMainMenu === "menu1" ? "activeMainMenu" : ""
                 }`}
               >
-                {" "}
                 <div
                   className="mainMenu"
                   onClick={() => handleButtonClickSMenu("subMenu01", "menu1")}
@@ -323,21 +323,265 @@ export default function HideMenu({ onClose }) {
               </li>
             </ul>
           </div>
-
-          <div className={`class2 ${activeButton === "button2" ? "show" : ""}`}>
-            전세계 모든 어린이를 위해2
+          <div className={`class1 ${activeButton === "button2" ? "show" : ""}`}>
             <ul>
-              <li>활동지역</li>
-              <li>스쿨스 포 아시아</li>
-              <li>#OnMyMind</li>
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu1" ? "activeMainMenu" : ""
+                }`}
+              >
+                {" "}
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu02", "menu1")}
+                >
+                  개인이 후원
+                  <img
+                    src={
+                      activeMainMenu === "menu1"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu1" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu01" && (
+                  <ul className="subMenu">
+                    <li>정기후원</li>
+                    <li>일시후원</li>
+                    <li>생명을 구하는 선물</li>
+                    <li>고액 · 아너스 클럽</li>
+                    <li>기념기부</li>
+                    <li>유산-추모기부</li>
+                    <li>Party for UNICEF</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu2" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu02", "menu2")}
+                >
+                  단체에서 후원
+                  <img
+                    src={
+                      activeMainMenu === "menu2"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu2" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu02" && (
+                  <ul className="subMenu">
+                    <li>기업 · 기관 사회공헌</li>
+                    <li>학교후원</li>
+                    <li>병원후원</li>
+                    <li>후원회</li>
+                  </ul>
+                )}
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu4" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu04", "menu4")}
+                >
+                  후원자 참여
+                  <img
+                    src={
+                      activeMainMenu === "menu4"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu4" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu04" && (
+                  <ul className="subMenu">
+                    <li>현장 방문</li>
+                    <li>행사 · 이벤트</li>
+                    <li>참여 활동</li>
+                    <li>후원자 이야기</li>
+                  </ul>
+                )}
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button5" || subMenu === "subMenu05"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu05", "menu5")}
+                >
+                  어린이 참여
+                  <img
+                    src={
+                      activeMainMenu === "menu5"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu5" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu05" && (
+                  <ul className="subMenu">
+                    <li>어린이지구촌체험관</li>
+                    <li>아동의회</li>
+                  </ul>
+                )}
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button8" || subMenu === "subMenu08"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu08", "menu8")}
+                >
+                  이벤트/캠페인
+                </div>
+              </li>
             </ul>
           </div>
-          <div className={`class3 ${activeButton === "button3" ? "show" : ""}`}>
-            전세계 모든 어린이를 위해3
+          <div className={`class1 ${activeButton === "button3" ? "show" : ""}`}>
             <ul>
-              <li>활동지역</li>
-              <li>스쿨스 포 아시아</li>
-              <li>#OnMyMind</li>
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu1" ? "activeMainMenu" : ""
+                }`}
+              >
+                {" "}
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu01", "menu1")}
+                >
+                  유니세프
+                  <img
+                    src={
+                      activeMainMenu === "menu1"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu1" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu01" && (
+                  <ul className="subMenu">
+                    <li>소개</li>
+                    <li>걸어온 길</li>
+                    <li>미션과 가치</li>
+                    <li>조직</li>
+                  </ul>
+                )}
+              </li>
+              <li
+                className={`closeList boldClass ${
+                  activeMainMenu === "menu2" ? "activeMainMenu" : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu02", "menu2")}
+                >
+                  투명한 유니세프
+                  <img
+                    src={
+                      activeMainMenu === "menu2"
+                        ? "/upArrow.png"
+                        : "/downArrow.png"
+                    }
+                    alt={activeMainMenu === "menu2" ? "up arrow" : "down arrow"}
+                    className="arrowIcon"
+                  />
+                </div>
+                {subMenu === "subMenu02" && (
+                  <ul className="subMenu">
+                    <li>기금 사용처</li>
+                  </ul>
+                )}
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button6" || subMenu === "subMenu06"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu06", "menu6")}
+                >
+                  유니세프와 사람들
+                </div>
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button7" || subMenu === "subMenu07"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu07", "menu7")}
+                >
+                  공지사항
+                </div>
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button8" || subMenu === "subMenu08"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu08", "menu8")}
+                >
+                  보도자료
+                </div>
+              </li>
+
+              <li
+                className={`closeList boldClass ${
+                  activeButton === "button8" || subMenu === "subMenu09"
+                    ? "activeMainMenu"
+                    : ""
+                }`}
+              >
+                <div
+                  className="mainMenu"
+                  onClick={() => handleButtonClickSMenu("subMenu09", "menu9")}
+                >
+                  채용
+                </div>
+              </li>
             </ul>
           </div>
         </div>

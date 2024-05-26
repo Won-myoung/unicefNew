@@ -226,9 +226,12 @@ div {
       padding: 0;
     }
   }
-  li:hover {
+  .introPlanItem:hover {
     outline: 2px solid var(--color-mainBlue);
   }
+}
+.introPlan .swiper .swiper-scrollbar-drag {
+  background-color: var(--color-mainBlue);
 }
 .introPlan ul::-webkit-scrollbar {
   width: 8px; /* 스크롤바 너비 조절 */

@@ -124,23 +124,25 @@
 .closeList.boldClass > ul > li.active {
   display: block;
 }
-.MainMenu {
-  color: #1cabe2;
-  border: 2px solid red;
+.mainMenu > img {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
 }
 .subMenu > li:hover {
   color: #1cabe2;
 }
 .subMenu01 {
-  border: 2px solid red;
 }
 .menuListRight {
   /* width: 100%; */
 }
 .arrowIcon {
-  height: 10px;
+  /* height: 10px; */
+  /* border: 2px solid red; */
   float: right;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+  padding: 0;
 }
 .boldClass.activeMainMenu {
   color: #1cabe2;
