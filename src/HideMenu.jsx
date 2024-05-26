@@ -3,12 +3,12 @@ import "./css/HideMenu.css";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 
 export default function HideMenu({ onClose }) {
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState("button1");
 
   const navigate = useNavigate();
   const location = useLocation();
 
-  //메뉴 마우스 enter시 메뉴 바뀜
+  //큰메뉴 마우스 enter시 작은메뉴 바뀜
   useEffect(() => {
     const path = location.pathname;
     if (path === "/doing") {
@@ -17,10 +17,10 @@ export default function HideMenu({ onClose }) {
       // 메뉴 버튼이 변경될 때 메인 메뉴의 상태를 초기화합니다.
     } else if (path === "/sponsor") {
       setActiveButton("button2");
-      // setActiveMainMenu("menu2");
+      setActiveMainMenu("menu2");
     } else if (path === "/introduce") {
       setActiveButton("button3");
-      // setActiveMainMenu("menu3");
+      setActiveMainMenu("menu3");
     }
   }, [location.pathname]);
 
@@ -41,8 +41,8 @@ export default function HideMenu({ onClose }) {
     setActiveButton(buttonName);
   };
 
-  const [subMenu, setSubMenu] = useState("subMenu01");
-  // 초기 상태는 'DoingSub01'
+  const [subMenu, setSubMenu] = useState("subMenu01"); // submenu open
+  const [activeMainMenu, setActiveMainMenu] = useState("menu1"); //메뉴 홧살표 넣기
 
   const handleButtonClickSMenu = (tab, menu) => {
     if (activeMainMenu === menu) {
@@ -54,9 +54,6 @@ export default function HideMenu({ onClose }) {
 
     // 버튼을 누를 때마다 currentTab 상태 업데이트
   };
-
-  //메뉴 홧살표 넣기
-  const [activeMainMenu, setActiveMainMenu] = useState(null);
 
   return (
     <div className="hideMenu" /* onMouseLeave={handleMouseLeave} */>
@@ -122,6 +119,7 @@ export default function HideMenu({ onClose }) {
             유니세프 소개
           </button>
         </div>
+
         <div
           className="menuListRight"
           onMouseEnter={() => setActiveButton(activeButton)}
@@ -156,6 +154,7 @@ export default function HideMenu({ onClose }) {
                   </ul>
                 )}
               </li>
+
               <li
                 className={`closeList boldClass ${
                   activeMainMenu === "menu2" ? "activeMainMenu" : ""
@@ -186,6 +185,7 @@ export default function HideMenu({ onClose }) {
                   </ul>
                 )}
               </li>
+
               <li
                 className={`closeList boldClass ${
                   activeMainMenu === "menu3" ? "activeMainMenu" : ""
@@ -216,6 +216,7 @@ export default function HideMenu({ onClose }) {
                   </ul>
                 )}
               </li>
+
               <li
                 className={`closeList boldClass ${
                   activeMainMenu === "menu4" ? "activeMainMenu" : ""
@@ -247,9 +248,7 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button5" || subMenu === "subMenu05"
-                    ? "activeMainMenu"
-                    : ""
+                  activeMainMenu === "menu5" ? "activeMainMenu" : ""
                 }`}
               >
                 <div
@@ -279,7 +278,7 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button6" || subMenu === "subMenu06"
+                  activeButton === "menu6" || subMenu === "subMenu06"
                     ? "activeMainMenu"
                     : ""
                 }`}
@@ -294,7 +293,7 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button7" || subMenu === "subMenu07"
+                  activeButton === "menu7" || subMenu === "subMenu07"
                     ? "activeMainMenu"
                     : ""
                 }`}
@@ -309,7 +308,7 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button8" || subMenu === "subMenu08"
+                  activeButton === "menu8" || subMenu === "subMenu08"
                     ? "activeMainMenu"
                     : ""
                 }`}
@@ -323,30 +322,30 @@ export default function HideMenu({ onClose }) {
               </li>
             </ul>
           </div>
-          <div className={`class1 ${activeButton === "button2" ? "show" : ""}`}>
+
+          <div className={`class2 ${activeButton === "button2" ? "show" : ""}`}>
             <ul>
               <li
                 className={`closeList boldClass ${
-                  activeMainMenu === "menu1" ? "activeMainMenu" : ""
+                  activeMainMenu === "menu9" ? "activeMainMenu" : ""
                 }`}
               >
-                {" "}
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu02", "menu1")}
+                  onClick={() => handleButtonClickSMenu("subMenu09", "menu9")}
                 >
                   개인이 후원
                   <img
                     src={
-                      activeMainMenu === "menu1"
+                      activeMainMenu === "menu9"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu1" ? "up arrow" : "down arrow"}
+                    alt={activeMainMenu === "menu9" ? "up arrow" : "down arrow"}
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu01" && (
+                {subMenu === "subMenu09" && (
                   <ul className="subMenu">
                     <li>정기후원</li>
                     <li>일시후원</li>
@@ -358,27 +357,30 @@ export default function HideMenu({ onClose }) {
                   </ul>
                 )}
               </li>
+
               <li
                 className={`closeList boldClass ${
-                  activeMainMenu === "menu2" ? "activeMainMenu" : ""
+                  activeMainMenu === "menu10" ? "activeMainMenu" : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu02", "menu2")}
+                  onClick={() => handleButtonClickSMenu("subMenu10", "menu10")}
                 >
                   단체에서 후원
                   <img
                     src={
-                      activeMainMenu === "menu2"
+                      activeMainMenu === "menu10"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu2" ? "up arrow" : "down arrow"}
+                    alt={
+                      activeMainMenu === "menu10" ? "up arrow" : "down arrow"
+                    }
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu02" && (
+                {subMenu === "subMenu10" && (
                   <ul className="subMenu">
                     <li>기업 · 기관 사회공헌</li>
                     <li>학교후원</li>
@@ -390,25 +392,27 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeMainMenu === "menu4" ? "activeMainMenu" : ""
+                  activeMainMenu === "menu11" ? "activeMainMenu" : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu04", "menu4")}
+                  onClick={() => handleButtonClickSMenu("subMenu11", "menu11")}
                 >
                   후원자 참여
                   <img
                     src={
-                      activeMainMenu === "menu4"
+                      activeMainMenu === "menu11"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu4" ? "up arrow" : "down arrow"}
+                    alt={
+                      activeMainMenu === "menu11" ? "up arrow" : "down arrow"
+                    }
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu04" && (
+                {subMenu === "subMenu11" && (
                   <ul className="subMenu">
                     <li>현장 방문</li>
                     <li>행사 · 이벤트</li>
@@ -420,27 +424,27 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button5" || subMenu === "subMenu05"
-                    ? "activeMainMenu"
-                    : ""
+                  activeMainMenu === "menu12" ? "activeMainMenu" : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu05", "menu5")}
+                  onClick={() => handleButtonClickSMenu("subMenu12", "menu12")}
                 >
                   어린이 참여
                   <img
                     src={
-                      activeMainMenu === "menu5"
+                      activeMainMenu === "menu12"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu5" ? "up arrow" : "down arrow"}
+                    alt={
+                      activeMainMenu === "menu12" ? "up arrow" : "down arrow"
+                    }
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu05" && (
+                {subMenu === "subMenu12" && (
                   <ul className="subMenu">
                     <li>어린이지구촌체험관</li>
                     <li>아동의회</li>
@@ -450,44 +454,47 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button8" || subMenu === "subMenu08"
+                  activeButton === "menu13" || subMenu === "subMenu013"
                     ? "activeMainMenu"
                     : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu08", "menu8")}
+                  onClick={() => handleButtonClickSMenu("subMenu013", "menu13")}
                 >
                   이벤트/캠페인
                 </div>
               </li>
             </ul>
           </div>
-          <div className={`class1 ${activeButton === "button3" ? "show" : ""}`}>
+
+          <div className={`class3 ${activeButton === "button3" ? "show" : ""}`}>
             <ul>
               <li
                 className={`closeList boldClass ${
-                  activeMainMenu === "menu1" ? "activeMainMenu" : ""
+                  activeMainMenu === "menu14" ? "activeMainMenu" : ""
                 }`}
               >
                 {" "}
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu01", "menu1")}
+                  onClick={() => handleButtonClickSMenu("subMenu14", "menu14")}
                 >
                   유니세프
                   <img
                     src={
-                      activeMainMenu === "menu1"
+                      activeMainMenu === "menu14"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu1" ? "up arrow" : "down arrow"}
+                    alt={
+                      activeMainMenu === "menu14" ? "up arrow" : "down arrow"
+                    }
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu01" && (
+                {subMenu === "subMenu14" && (
                   <ul className="subMenu">
                     <li>소개</li>
                     <li>걸어온 길</li>
@@ -498,25 +505,27 @@ export default function HideMenu({ onClose }) {
               </li>
               <li
                 className={`closeList boldClass ${
-                  activeMainMenu === "menu2" ? "activeMainMenu" : ""
+                  activeMainMenu === "menu15" ? "activeMainMenu" : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu02", "menu2")}
+                  onClick={() => handleButtonClickSMenu("subMenu15", "menu15")}
                 >
                   투명한 유니세프
                   <img
                     src={
-                      activeMainMenu === "menu2"
+                      activeMainMenu === "menu15"
                         ? "/upArrow.png"
                         : "/downArrow.png"
                     }
-                    alt={activeMainMenu === "menu2" ? "up arrow" : "down arrow"}
+                    alt={
+                      activeMainMenu === "menu15" ? "up arrow" : "down arrow"
+                    }
                     className="arrowIcon"
                   />
                 </div>
-                {subMenu === "subMenu02" && (
+                {subMenu === "subMenu15" && (
                   <ul className="subMenu">
                     <li>기금 사용처</li>
                   </ul>
@@ -525,14 +534,14 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button6" || subMenu === "subMenu06"
+                  activeButton === "menu16" || subMenu === "subMenu16"
                     ? "activeMainMenu"
                     : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu06", "menu6")}
+                  onClick={() => handleButtonClickSMenu("subMenu16", "menu16")}
                 >
                   유니세프와 사람들
                 </div>
@@ -540,14 +549,14 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button7" || subMenu === "subMenu07"
+                  activeButton === "menu17" || subMenu === "subMenu17"
                     ? "activeMainMenu"
                     : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu07", "menu7")}
+                  onClick={() => handleButtonClickSMenu("subMenu17", "menu17")}
                 >
                   공지사항
                 </div>
@@ -555,14 +564,14 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button8" || subMenu === "subMenu08"
+                  activeButton === "menu18" || subMenu === "subMenu18"
                     ? "activeMainMenu"
                     : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu08", "menu8")}
+                  onClick={() => handleButtonClickSMenu("subMenu18", "menu18")}
                 >
                   보도자료
                 </div>
@@ -570,14 +579,14 @@ export default function HideMenu({ onClose }) {
 
               <li
                 className={`closeList boldClass ${
-                  activeButton === "button8" || subMenu === "subMenu09"
+                  activeButton === "menu19" || subMenu === "subMenu19"
                     ? "activeMainMenu"
                     : ""
                 }`}
               >
                 <div
                   className="mainMenu"
-                  onClick={() => handleButtonClickSMenu("subMenu09", "menu9")}
+                  onClick={() => handleButtonClickSMenu("subMenu19", "menu19")}
                 >
                   채용
                 </div>
