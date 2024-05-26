@@ -352,7 +352,7 @@ export default function MainPage() {
           <div className="selectMoney">
             <div className="selectBox">
               <select name="" id="">
-                <option value="">정기</option>
+                <option value="">정기 </option>
                 <option value="">일시</option>
               </select>
             </div>
@@ -393,8 +393,7 @@ export default function MainPage() {
                 <strong>
                   월 <span id="price">{priceText}</span>이면, 전 세계 어린이를
                   위해
-                  <span id="vaccines"> {vaccineText}</span>를 지원할 수
-                  있습니다.
+                  <span id="vaccines"> {vaccineText}</span>를 지원할 수 있습니다
                 </strong>
               </div>
             </div>
