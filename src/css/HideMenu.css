@@ -1,0 +1,157 @@
+@import url("./colorVaration.css");
+
+* {
+  letter-spacing: -0.1px;
+}
+
+.hideMenu {
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999 !important;
+}
+
+.topMenu {
+  padding: 20px 20px 40px;
+}
+.topButton {
+  display: flex;
+}
+.topIcons {
+  display: flex;
+  height: 24px;
+  gap: 16px;
+  margin-left: auto;
+  > a img {
+    width: 24px;
+    aspect-ratio: 1/1;
+  }
+  > button {
+    background-color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    > img {
+      width: 24px;
+    }
+  }
+}
+.topButton .logIn {
+  font-size: 14px;
+  color: black;
+  margin-bottom: 40px;
+}
+.middleIcons {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.middleIcons a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.middleIcons a img {
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--color-mainBlue);
+  margin-bottom: 6px;
+}
+
+.receiptBtn {
+  width: 100%;
+  border: 1px solid var(--color-mainBlue);
+  background-color: var(--color-white);
+  color: var(--color-mainBlue);
+  font-weight: 800;
+  font-size: 20px;
+  padding: 14px;
+}
+
+.menuList {
+  display: flex;
+}
+.menuListLeft {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-mainBlue);
+  width: 30%;
+  height: 100vh;
+  > button {
+    height: 64px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 900;
+    color: white;
+  }
+}
+.menuListLeft > button.active {
+  background-color: var(--color-white);
+  color: var(--color-mainBlue);
+}
+
+.menuListRight {
+  font-size: 14px;
+  padding: 20px;
+  width: 100%;
+}
+.menuListRight > div {
+  display: none;
+}
+.menuListRight > div.show {
+  display: block;
+}
+
+.boldClass {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.closeList.boldClass > ul > li {
+  font-weight: normal;
+  margin-top: 8px;
+  /* display: none; */
+}
+.closeList.boldClass > ul > li.active {
+  display: block;
+}
+.mainMenu > img {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+}
+.subMenu > li:hover {
+  color: #1cabe2;
+}
+.subMenu01 {
+}
+.menuListRight {
+  /* width: 100%; */
+}
+.arrowIcon {
+  /* height: 10px; */
+  /* border: 2px solid red; */
+  float: right;
+  /* margin-top: 10px; */
+  padding: 0;
+}
+.boldClass.activeMainMenu {
+  color: #1cabe2;
+  .subMenu {
+    color: black;
+  }
+}
+@media (max-width: 640px) {
+  .receiptBtn {
+    font-size: 16px;
+  }
+}

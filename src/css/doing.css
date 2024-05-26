@@ -1,0 +1,154 @@
+* {
+  letter-spacing: 0.1;
+}
+h2,
+p {
+  margin: none;
+  padding: none;
+}
+
+.doing {
+  position: relative;
+}
+
+.doingTopBar {
+  max-width: 1120px;
+  margin: 0 auto;
+  height: 200px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.doingTopBar h2 {
+  font-size: 48px;
+}
+.doingTopBar p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.doingBodyWrap {
+  max-width: 1120px;
+  min-width: 400px;
+  color: var(--color-black);
+  margin: 100px auto 120px;
+  padding: 0 20px;
+}
+.doing .doingBody01 {
+  margin-bottom: 120px;
+}
+.doingBody01 h2 {
+  font-size: 40px;
+}
+
+.doingBody01 > p {
+  font-size: 14px;
+  color: var(--color-black);
+  margin-top: 30px;
+  span {
+    color: var(--color-mainBlue);
+    font-weight: 600;
+    line-height: 2;
+  }
+}
+
+.doingFeatures {
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 100px 0;
+  img {
+    display: block;
+    width: 160px;
+    margin-bottom: 20px;
+  }
+  > div {
+    min-width: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  p {
+    font-size: 16px;
+  }
+  strong {
+    font-size: 20px;
+    color: var(--color-mainBlue);
+  }
+}
+
+.doingBody02 button {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 20px;
+  background-color: #e7eaec;
+  border: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  border-radius: 40px;
+  letter-spacing: -2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.doingBody02 button:hover {
+  background-color: var(--color-mainBlue);
+  color: var(--color-white);
+}
+
+.doingBody02 button:nth-child(3) {
+  margin-right: 0;
+}
+
+.doingBody02 button.active {
+  background-color: var(--color-mainBlue);
+  color: var(--color-white);
+}
+
+@media (max-width: 990px) {
+  .doingBody01 .doingFeatures img {
+    width: 80px;
+  }
+  .doingBody01 .doingFeatures p {
+    font-size: 14px;
+  }
+  .doingBody01 .doingFeatures strong {
+    font-size: 16px;
+  }
+  .doingBody02 button {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 786px) {
+  .doingBody02 button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .doingBody01 > h2 {
+    font-size: 26px;
+  }
+  .doingFeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    > div {
+      flex-direction: row;
+      height: 80px;
+    }
+    > div > img {
+      margin: 0;
+    }
+    > div > div {
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+}

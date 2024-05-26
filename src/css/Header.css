@@ -1,0 +1,195 @@
+@import url("./colorVaration.css");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+.uniMainButton {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+/* start */
+
+.header {
+  max-width: 1120px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  /* position: fixed; */
+}
+
+.topMenu {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  /* display: inline-block; */
+}
+.topMenu.active {
+  color: var(--color-mainBlue);
+}
+.topMenu:hover {
+  color: var(--color-mainBlue);
+}
+
+.removeMenu a {
+  margin-right: 25px;
+}
+
+.uniMainButton {
+  margin-right: 100px;
+}
+.uniMainButton img {
+  display: block;
+}
+.sponsoring {
+  margin-left: auto;
+  background-color: rgb(255, 220, 14);
+  width: 182px;
+  height: 75px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 70px;
+  transition: all 0.3s;
+}
+.sponsoring:hover {
+  color: black !important;
+  background-color: #ffc20e;
+}
+
+.burgerIcon {
+  width: 30px;
+  /* 아이콘의 너비 */
+  height: 20px; /* 아이콘의 높이 */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; /* 세로 방향으로 아이콘을 공간을 균등하게 배치 */
+  cursor: pointer; /* 클릭 가능한 아이콘으로 설정 */
+  height: 75px;
+  width: 75px;
+  padding: 28px;
+  border: none;
+  background-color: var(--color-mainBlue);
+  transition: all 0.3s;
+  display: none;
+}
+.burgerIcon:hover {
+  background-color: #374ea2;
+}
+
+.burgerIcon .line {
+  border-radius: 10px;
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-white);
+}
+.spreadBg {
+  width: 100%;
+  height: auto;
+  border: 2px solid blue;
+}
+.doingMenuSpread,
+.giveMenuSpread,
+.introduceMenuSpread {
+  width: 100%;
+  margin: 0 auto;
+  gap: 50px;
+  padding: 20px 20px;
+  border-top: 1px solid gray;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 115px;
+  display: none;
+  z-index: 999;
+}
+
+.doingMenuSpread > ul,
+.giveMenuSpread > ul,
+.introduceMenuSpread > ul {
+  display: flex;
+  max-width: 1120px;
+  flex-grow: 1;
+  gap: 50px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* margin: 0; */
+  .boldClass {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px 0;
+  }
+}
+.doingMenuSpread li,
+.giveMenuSpread li,
+.introduceMenuSpread li {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.doingMenuSpread a:hover,
+.giveMenuSpread a:hover,
+.introduceMenuSpread a:hover {
+  /* color: var(--color-mainBlue); */
+  color: var(--color-mainBlue);
+}
+.doingMenuSpread a,
+.giveMenuSpread a,
+.introduceMenuSpread a {
+  display: block;
+}
+
+.doingMenuSpread > ul > li:first-child,
+.giveMenuSpread > ul > li:first-child,
+.introduceMenuSpread > ul > li:first-child {
+  margin-top: 20px;
+}
+
+li {
+  cursor: pointer;
+}
+
+@media (max-width: 990px) {
+  .removeMenu {
+    display: none;
+  }
+  .header {
+    height: 70px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .uniMainButton {
+    margin-right: 30px;
+  }
+  /*   .removeMenu a {
+    margin-right: 14px;
+  } */
+  .uniMainButton img {
+    width: 140px;
+  }
+  .burgerIcon {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .uniMainButton img {
+    width: 113px;
+  }
+}
