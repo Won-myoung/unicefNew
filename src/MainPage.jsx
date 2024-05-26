@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./css/mainPage.css";
+import "./css/mainPage.css";
 
 // Import Swiper styles
 import "swiper/css";
@@ -260,7 +260,7 @@ export default function MainPage() {
   };
 
   return (
-    <>
+    <div className="mainPageWrap">
       <div className="mainCover01wrap">
         <Swiper
           pagination={true}
@@ -1123,6 +1123,6 @@ export default function MainPage() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

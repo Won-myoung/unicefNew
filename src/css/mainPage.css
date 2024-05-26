@@ -1,8 +1,5 @@
 @import url("./colorVaration.css");
 
-body {
-  overflow-x: hidden;
-}
 /* swiper  공동조건*/
 .swiper {
   overflow: visible;
@@ -1376,5 +1373,11 @@ body {
   .mainWithWrap > div > button {
     margin: 30px 0 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 1120px) {
+  .mainPageWrap {
+    overflow-x: hidden;
   }
 }
