@@ -176,11 +176,12 @@ export default function Introduce() {
           <div className="introWhatTextBox">
             <h3 style={{ fontSize: calculateFontSize3220() }}>유니세프는</h3>
             <strong style={{ fontSize: calculateFontSize4024() }}>
-              신뢰할 수 있습니다
+              같은 돈으로 더 많은 어린이를 구합니다
             </strong>
             <p style={{ fontSize: calculateFontSize1614() }}>
-              유엔 기관이기 때문입니다. 유엔아동권리협약에 직접 명시된 유일한
-              아동권리증진 기관이자 1965년에 노벨평화상도 수상했습니다.
+              유니세프는 약 80년의 경험과 전문성을 가지고 있으며 구호물품 등을
+              대량 구매하며 각국 정부와 협력해 근본적인 문제 해결을 추구하기
+              때문입니다.
             </p>
           </div>
           <div className="introWhatVisualBox">
@@ -191,11 +192,13 @@ export default function Introduce() {
           <div className="introWhatTextBox">
             <h3 style={{ fontSize: calculateFontSize3220() }}>유니세프는</h3>
             <strong style={{ fontSize: calculateFontSize4024() }}>
-              신뢰할 수 있습니다
+              재난 발생시 가장 먼저 현장에 접근합니다
             </strong>
             <p style={{ fontSize: calculateFontSize1614() }}>
-              유엔 기관이기 때문입니다. 유엔아동권리협약에 직접 명시된 유일한
-              아동권리증진 기관이자 1965년에 노벨평화상도 수상했습니다.
+              유니세프는 약 190개 나라와 영토에서 활동하며, 5개의 물류센터를
+              보유해 전 세계 어디서 재난이 발생해도 가장 신속하게 현장에
+              접근하여 어린이를 돕습니다. 긴급상황이 종료된 후에도 한결같이
+              어린이 곁을 지키며 지속가능한 발전을 지원합니다.
             </p>
           </div>
           <div className="introWhatVisualBox">
@@ -206,11 +209,13 @@ export default function Introduce() {
           <div className="introWhatTextBox">
             <h3 style={{ fontSize: calculateFontSize3220() }}>유니세프는</h3>
             <strong style={{ fontSize: calculateFontSize4024() }}>
-              신뢰할 수 있습니다
+              효율적이고 투명합니다
             </strong>
             <p style={{ fontSize: calculateFontSize1614() }}>
-              유엔 기관이기 때문입니다. 유엔아동권리협약에 직접 명시된 유일한
-              아동권리증진 기관이자 1965년에 노벨평화상도 수상했습니다.
+              유니세프한국위원회는 고유목적사업을 위해 매년 총 수입의 90% 이상을
+              국내외 어린이를 위해 사용합니다. 유니세프한국위원회는 내부감사와
+              외부회계법인 감사 및 유니세프 본부 감사를 통해 후원금 사용의
+              적정성을 검증받고 있으며, 국세청에 투명하게 공시하고 있습니다.
             </p>
           </div>
           <div className="introWhatVisualBox">
@@ -221,11 +226,12 @@ export default function Introduce() {
           <div className="introWhatTextBox">
             <h3 style={{ fontSize: calculateFontSize3220() }}>유니세프는</h3>
             <strong style={{ fontSize: calculateFontSize4024() }}>
-              신뢰할 수 있습니다
+              도움을 줄 차례입니다
             </strong>
             <p style={{ fontSize: calculateFontSize1614() }}>
-              유엔 기관이기 때문입니다. 유엔아동권리협약에 직접 명시된 유일한
-              아동권리증진 기관이자 1965년에 노벨평화상도 수상했습니다.
+              유니세프는 1950년부터 1993년까지 43년간 수많은 한국 어린이의
+              소중한 생명을 지켰습니다. 이제는 우리가 개발도상국 어린이들에게도
+              꿈꿀 기회를 주어야 합니다.
             </p>
           </div>
           <div className="introWhatVisualBox">
@@ -291,44 +297,37 @@ export default function Introduce() {
             className="mySwiper"
           >
             <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+              <a href="">
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission01.png" alt="" />
               </a>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+              <a href="">
                 모든 어린이의 <br />
-                <span>생존과 발달</span>
+                <span> 교육</span>
                 <img src="/introduce/mission02.png" alt="" />
               </a>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+              <a href="">
                 모든 어린이의 <br />
-                <span>생존과 발달</span>
+                <span>보호</span>
                 <img src="/introduce/mission03.png" alt="" />
               </a>
             </SwiperSlide>
-            <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+            <SwiperSlide className="introPlanItem  fs16">
+              <a href="">
                 모든 어린이의 <br />
-                <span>생존과 발달</span>
+                <span>안전하고 지속 가능한 환경</span>
                 <img src="/introduce/mission04.png" alt="" />
               </a>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
+              <a href="">
                 모든 어린이의 <br />
-                <span>생존과 발달</span>
-                <img src="/introduce/mission05.png" alt="" />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide className="introPlanItem">
-              <a href="" style={{ fontSize: calculateFontSize2016() }}>
-                모든 어린이의 <br />
-                <span>생존과 발달</span>
+                <span>공평한 기회</span>
                 <img src="/introduce/mission05.png" alt="" />
               </a>
             </SwiperSlide>

@@ -75,7 +75,6 @@ div {
 
 .introWhatTextBox {
   padding: 96px 20px 0 0;
-  flex-grow: 1;
 }
 
 .introRecord {
@@ -203,6 +202,7 @@ div {
   overflow: hidden;
   background-color: none;
   .introPlanItem {
+    font-size: 20px;
     text-align: center;
     width: 188px;
     height: 244px;
@@ -211,13 +211,13 @@ div {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     box-sizing: border-box;
+    position: relative;
     a {
       text-decoration: none;
       font-weight: bold;
       color: black;
       span {
         color: var(--color-mainBlue);
-        font-size: 16px;
       }
     }
     img {
@@ -225,6 +225,19 @@ div {
       margin: 40px auto 0;
       padding: 0;
     }
+  }
+  .introPlanItem.fs16 a span {
+    font-size: 16px;
+  }
+  .introPlanItem::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url(/public/introduce/linkIconColor.png) no-repeat center/cover;
   }
   .introPlanItem:hover {
     outline: 2px solid var(--color-mainBlue);
@@ -271,6 +284,7 @@ div {
     overflow: visible;
     gap: 20px;
   }
+
   .introPlanHead02Item {
     width: 268px;
     height: 228px;
@@ -278,12 +292,23 @@ div {
     padding: 50px 10px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+    position: relative;
     img {
       margin: 10px auto 0;
       width: 80px;
       height: 80px;
       padding: 0;
     }
+  }
+  .introPlanHead02Item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    background: url(/public/introduce/linkIconColor.png) no-repeat center/cover;
   }
 }
 .introCommonPlan {
@@ -341,7 +366,9 @@ div {
   .introWhatDifferent {
     padding: 60px 20px;
   }
-
+  .introPlan .mySwiper .introPlanItem {
+    font-size: 16px;
+  }
   .introRecord {
     padding: 60px 20px;
   }
@@ -357,15 +384,23 @@ div {
 }
 @media (max-width: 640px) {
   .introWhatDifferentBox {
-    width: calc(100vw - 20px);
-    /* margin-left: -20px; */
-    display: grid;
-    grid-template-columns: 1fr;
-    /* margin: 0; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
   }
   .introWhatTextBox {
     height: 380px;
-    padding: 96px 20px 0;
+    padding: 48px 20px 0;
+  }
+  .introPlan .mySwiper .swiper-slide {
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+    /* position: relative; */
+    /* padding-bottom: 20px; */
+  }
+  .introPlan .mySwiper .swiper-scrollbar {
+    margin-bottom: 0;
   }
   .introPlanHead02 ul {
     display: flex;

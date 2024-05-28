@@ -275,8 +275,8 @@ export default function MainPage() {
         >
           <SwiperSlide className="mainCoverItem cover01">
             <div>
-              <h2>하나일 때 더 빛나는 유니세프 팀 반지</h2>
-              <p>유니세프 팀 반지로 당신의 선한 영향력을 보여주세요</p>
+              <h2>UNICEF TEAM</h2>
+              <p>어린이를 위해 그리고 나를 위해</p>
               <button type="button">자세히 보기</button>
             </div>
           </SwiperSlide>
@@ -318,8 +318,8 @@ export default function MainPage() {
         >
           <SwiperSlide className="mainCoverItem thumCover01">
             <div>
-              <h2>하나일 때 더 빛나는 유니세프 팀 반지</h2>
-              <p>유니세프 팀 반지로 당신의 선한 영향력을 보여주세요</p>
+              <h2>UNICEF TEAM</h2>
+              <p>어린이를 위해 그리고 나를 위해</p>
               <button type="button">자세히 보기</button>
             </div>
           </SwiperSlide>
@@ -669,6 +669,19 @@ export default function MainPage() {
           >
             <SwiperSlide className="mainNewsItem">
               <a href="">
+                <img src="/main/uninews13.jpg" alt="" className="newsCover" />
+                <strong>스토리</strong>
+                <div className="mainNewsTextbox">
+                  <p>
+                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
+                    유니세프아동친화기업 지수' 보고...
+                  </p>
+                  <span>2024.05.21</span>
+                </div>
+              </a>
+            </SwiperSlide>
+            <SwiperSlide className="mainNewsItem">
+              <a href="">
                 <img src="/main/uninews01.png" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
@@ -803,19 +816,6 @@ export default function MainPage() {
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
               <a href="">
-                <img src="/main/uninews11.png" alt="" className="newsCover" />
-                <strong>스토리</strong>
-                <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
-                </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide className="mainNewsItem">
-              <a href="">
                 <img src="/main/uninews12.jpg" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
@@ -922,6 +922,11 @@ export default function MainPage() {
             <SwiperSlide className="mainBannerItem">
               <a href="#">
                 <img src="/main/banner05.jpg" alt="" />
+              </a>
+            </SwiperSlide>
+            <SwiperSlide className="mainBannerItem">
+              <a href="#">
+                <img src="/main/banner06.jpg" alt="" />
               </a>
             </SwiperSlide>
           </Swiper>

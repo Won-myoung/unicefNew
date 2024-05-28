@@ -100,7 +100,7 @@
 .mainCover02wrap .mainCover02 .mainCoverItem {
   width: 100%;
   aspect-ratio: 640/895;
-  background: url(/public/main/mainCoverThum01.png) no-repeat center
+  background: url(/public/main/mainCoverThum01.jpg) no-repeat center
     center/cover;
 }
 
@@ -1048,7 +1048,7 @@
 .mainEventBody {
   display: flex;
   max-width: 100%;
-  max-height: 400px;
+  /* max-height: 400px; */
   background-color: var(--color-mainBlue);
   margin: 0 auto;
   padding: 118px 0 0 0;
@@ -1158,7 +1158,7 @@
     width: 100%;
     margin: 0;
     padding: 20px 0;
-    max-height: 600px;
+    /* max-height: 600px; */
   }
   .mainEventBody::before {
     width: 500px;
