@@ -6,7 +6,7 @@ import "./css/mainPage.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
+import "swiper/css/Linkutoplay";
 import "swiper/css/navigation";
 
 // import "./css/mainPage.module.css";
@@ -18,8 +18,8 @@ import {
   Autoplay,
   FreeMode,
   Scrollbar,
-  Virtual,
 } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function MainPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -511,7 +511,7 @@ export default function MainPage() {
             </div>
             <div className="mainChantSwiperBody">
               <div className="mainChantYoutube">
-                <iframe
+                <iFrame
                   width="100%"
                   height="272"
                   src="https://www.youtube.com/embed/j28UkZAxQJQ"
@@ -520,7 +520,7 @@ export default function MainPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                ></iframe>
+                ></iFrame>
               </div>
               <div className="mainChantSwiperBodyItem">
                 <ul>
@@ -560,7 +560,7 @@ export default function MainPage() {
             </div>
             <div className="mainChantSwiperBody">
               <div className="mainChantYoutube">
-                <iframe
+                <iFrame
                   width="100%"
                   height="272"
                   src="https://www.youtube.com/embed/3vWCyEQnpWo"
@@ -569,7 +569,7 @@ export default function MainPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                ></iframe>
+                ></iFrame>
               </div>
               <div className="mainChantSwiperBodyItem">
                 <ul>
@@ -609,7 +609,7 @@ export default function MainPage() {
             </div>
             <div className="mainChantSwiperBody">
               <div className="mainChantYoutube">
-                <iframe
+                <iFrame
                   width="100%"
                   height="272"
                   src="https://www.youtube.com/embed/rGIkyObj-0M"
@@ -618,7 +618,7 @@ export default function MainPage() {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                ></iframe>
+                ></iFrame>
               </div>
               <div className="mainChantSwiperBodyItem">
                 <ul>
@@ -668,20 +668,32 @@ export default function MainPage() {
             className="mySwiper"
           >
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
+                <img src="/main/uninews14.jpg" alt="" className="newsCover" />
+                <strong>보도자료</strong>
+                <div className="mainNewsTextbox">
+                  <p>
+                    안효섭·리정·박위·심으뜸·차준환·차현승 ‘유니세프 팀’ 동참
+                  </p>
+                  <span>2024.05.28</span>
+                </div>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide className="mainNewsItem">
+              <Link to="">
                 <img src="/main/uninews13.jpg" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    [아이티 위기] 극심한 폭력, 불안, 빈곤, 영양실조 그리고
+                    콜레라까지
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.05.27</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews01.png" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
@@ -691,141 +703,110 @@ export default function MainPage() {
                   </p>
                   <span>2024.05.21</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews02.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+                <strong>성명</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    아프가니스탄 북동부 지역 홍수 피해 발생 관련 유니세프 성명
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.05.16</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews03.png" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
+                  <p>가자지구 피해 어린이 지원을 위한 2024 위라클워크 개최</p>
+                  <span>2024.05.13</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
-                <img
-                  className="newsCover coverNo4"
-                  src="/main/uninews04.jpg"
-                  alt=""
-                />
-                <strong>스토리</strong>
+              <Link to="">
+                <img src="/main/uninews04.jpg" alt="" className="newsCover" />
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    [언론 속 유니세프] "기부와 교육이 '시장경제 양극화' 해결할
+                    최고 치료제"
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.05.13</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
-                <img src="/main/uninews05.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+              <Link to="">
+                <img className="newsCover " src="/main/uninews05.jpg" alt="" />
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    유니세프 한국위원회 설립 30주년 맞아 ‘유니세프 어린이체험관’
+                    새롭게 문 열어
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.05.08</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews06.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
+                  <p>배우 안효섭 유니세프 한국위원회에 5천만 원 기부 </p>
+                  <span>2024.05.06</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews07.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
+                  <p>[언론 속 유니세프] 전쟁·기아로 고통받는 지구촌 어린이들</p>
+                  <span>2024.05.02</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews08.png" alt="" className="newsCover" />
                 <strong>스토리</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    아프가니스탄 북동부 지역 홍수 피해 발생 관련 유니세프 성명
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.04.30</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews09.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
+                  <p>바다·유진·소유진 ‘그린하트 바자회’ 5월 11일 개최</p>
+                  <span>2024.04.29</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainNewsItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/uninews10.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
+                <strong>보도자료</strong>
                 <div className="mainNewsTextbox">
                   <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
+                    ‘페이커’ 이상혁 유니세프 생명을 구하는 선물 ‘페이커 패키지’
+                    캠페인 참여
                   </p>
-                  <span>2024.05.21</span>
+                  <span>2024.4.24</span>
                 </div>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide className="mainNewsItem">
-              <a href="">
-                <img src="/main/uninews12.jpg" alt="" className="newsCover" />
-                <strong>스토리</strong>
-                <div className="mainNewsTextbox">
-                  <p>
-                    우리나라 기업은 아동을 얼마나 생각할까?: '2023
-                    유니세프아동친화기업 지수' 보고...
-                  </p>
-                  <span>2024.05.21</span>
-                </div>
-              </a>
+              </Link>
             </SwiperSlide>
           </Swiper>
         </div>
@@ -880,8 +861,8 @@ export default function MainPage() {
                 Donate together with BigHit Music·BTS
               </p>
               <div className="btnWrap">
-                <a href="#">후원하기</a>
-                <a href="#">Donate</a>
+                <Link to="#">후원하기</Link>
+                <Link to="#">Donate</Link>
               </div>
             </div>
           </div>
@@ -900,34 +881,34 @@ export default function MainPage() {
             className="mySwiper"
           >
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner01.gif" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner02.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner03.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner04.jpg" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner05.jpg" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainBannerItem">
-              <a href="#">
+              <Link to="#">
                 <img src="/main/banner06.jpg" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
           </Swiper>
         </div>
@@ -950,7 +931,7 @@ export default function MainPage() {
             className="mySwiper"
           >
             <SwiperSlide className="mainPeopleItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/people01.png" alt="" className="peopleCover" />
                 <strong>친선대사</strong>
                 <div className="mainPeopleTextbox">
@@ -960,10 +941,10 @@ export default function MainPage() {
                   </p>
                   <span>--안성기 친선대사</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainPeopleItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/people02.png" alt="" className="peopleCover" />
                 <strong>친선대사</strong>
                 <div className="mainPeopleTextbox">
@@ -973,10 +954,10 @@ export default function MainPage() {
                   </p>
                   <span>--김혜수 친선대사</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainPeopleItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/people03.png" alt="" className="peopleCover" />
                 <strong>후원자</strong>
                 <div className="mainPeopleTextbox">
@@ -986,10 +967,10 @@ export default function MainPage() {
                   </p>
                   <span>--권채근 후원자</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainPeopleItem">
-              <a href="">
+              <Link to="">
                 <img
                   className="newsCover coverNo4"
                   src="/main/people04.png"
@@ -1003,10 +984,10 @@ export default function MainPage() {
                   </p>
                   <span>--BGF리테일 기업 파트너십</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="mainPeopleItem">
-              <a href="">
+              <Link to="">
                 <img src="/main/people05.png" alt="" className="peopleCover" />
                 <strong>유니캐스터</strong>
                 <div className="mainPeopleTextbox">
@@ -1016,7 +997,7 @@ export default function MainPage() {
                   </p>
                   <span>--닥터프렌즈 유니캐스터</span>
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
           </Swiper>
         </div>

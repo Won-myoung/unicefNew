@@ -12,10 +12,6 @@ img {
   display: block;
 }
 
-Header {
-  /* border: 2px solid red; */
-}
-
 .modal-bg {
   background-color: var(--color-white);
 }
@@ -34,4 +30,14 @@ body {
 .swiper-slide {
   width: 100%; /* 각 슬라이드를 컨테이너 너비에 맞춤 */
   box-sizing: border-box; /* 패딩과 보더가 전체 너비에 포함되도록 설정 */
+}
+
+.App {
+  padding-top: 115px;
+}
+
+@media (max-width: 990px) {
+  .App {
+    padding-top: 70px;
+  }
 }

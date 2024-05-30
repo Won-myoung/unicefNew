@@ -1,0 +1,40 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+
+# .history파일도 제거해주세요 ㅠㅠ from 희진님
+.history/
+
+# Node.js dependencies
+node_modules/
+
+# Distribution files
+dist/
+dist-ssr/
+build/
+
+# Editor directories and files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+
+# Vite config file
+vite.config.js
+
+# Package files
+package.json
+package-lock.json

@@ -7,6 +7,7 @@ import Introduce from "./Introduce";
 import Footer from "./Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MainPage from "./MainPage";
+import ScrollToTop from "./ScrollToTop"; // ScrollToTop 컴포넌트 import
 
 function App() {
   const [isHideMenuOpen, setIsHideMenuOpen] = useState(false);
@@ -19,12 +20,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header toggleHideMenu={toggleHideMenu} />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/doing" element={<Doing />} />
           <Route path="/sponsor" element={<Sponsor />} />
           <Route path="/introduce" element={<Introduce />} />
-          {/* TestMenu 컴포넌트를 라우터에 등록 */}
         </Routes>
       </BrowserRouter>
       <Footer />

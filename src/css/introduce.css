@@ -4,9 +4,6 @@ div {
   overflow-wrap: break-word;
   /* word-wrap: break-word; */
 }
-.introduce {
-  position: relative;
-}
 
 .introTopBar {
   max-width: 1120px;

@@ -6,9 +6,6 @@
   word-break: keep-all;
 }
 /* components */
-.sponsor {
-  position: relative;
-}
 
 .sponsorTopBar {
   max-width: 1120px;

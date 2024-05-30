@@ -7,6 +7,7 @@ function BgBar() {
     width: "100%",
     zIndex: "-10",
     textIndent: "-999999px",
+    // marginTop: "115px",
   };
   const divStyleIn = {
     background:

@@ -13,6 +13,7 @@ import "./css/introduce.css";
 
 // import required modules
 import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 export default function Introduce() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -282,7 +283,7 @@ export default function Introduce() {
         <button>유니세프 미션</button>
         <div className="introPlan">
           <div className="introPlanHead">
-            <img src="/introduce/arrowTop.png" alt="" />
+            <img src="/introduce/LinkrrowTop.png" alt="" />
             <h4 style={{ fontSize: calculateFontSize2016() }}>
               유니세프 중점 사업 계획
             </h4>
@@ -297,39 +298,39 @@ export default function Introduce() {
             className="mySwiper"
           >
             <SwiperSlide className="introPlanItem">
-              <a href="">
+              <Link to="">
                 모든 어린이의 <br />
                 <span>생존과 발달</span>
                 <img src="/introduce/mission01.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="">
+              <Link to="">
                 모든 어린이의 <br />
                 <span> 교육</span>
                 <img src="/introduce/mission02.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="">
+              <Link to="">
                 모든 어린이의 <br />
                 <span>보호</span>
                 <img src="/introduce/mission03.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem  fs16">
-              <a href="">
+              <Link to="">
                 모든 어린이의 <br />
                 <span>안전하고 지속 가능한 환경</span>
                 <img src="/introduce/mission04.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
             <SwiperSlide className="introPlanItem">
-              <a href="">
+              <Link to="">
                 모든 어린이의 <br />
                 <span>공평한 기회</span>
                 <img src="/introduce/mission05.png" alt="" />
-              </a>
+              </Link>
             </SwiperSlide>
           </Swiper>
           <div className="introPlanHead02">
@@ -353,7 +354,7 @@ export default function Introduce() {
 
         <div className="introCommonPlan">
           <div className="introCommonPlanHead">
-            <img src="/introduce/arrowTop.png" alt="" />
+            <img src="/introduce/LinkrrowTop.png" alt="" />
             <h4 style={{ fontSize: calculateFontSize2016() }}>
               유니세프 국가위원회 공동 전략 계획
             </h4>

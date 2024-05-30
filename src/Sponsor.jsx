@@ -390,27 +390,10 @@ function Sponsor() {
           </SwiperSlide>
           <SwiperSlide>
             <div className="newsGroup">
-              <img src="/news/02.png" alt="" />
+              <img src="/news/06.jpg" alt="" />
               <strong>
-                김연아 유니세프 친선대사 튀르키예시리아 지진 피해 어린이
-                긴급구호 유니세프한국위원회에 미화 10만 달러 기부
-              </strong>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="newsGroup">
-              <img src="/news/03.jpg" alt="" />
-              <strong>
-                배우 박서준 튀르키예시리아 지진 피해 어린이 긴급구호 1억원 기부
-              </strong>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="newsGroup">
-              <img src="/news/04.jpg" alt="" />
-              <strong>
-                수지 유니세프한국위원회 ‘튀르키예·시리아 지진피해 어린이
-                긴급구호’ 1억원 기부
+                방탄소년단 지민 유니세프한국위원회에 1억 원 기부
+                ‘튀르키예·시리아 지진 피해 어린이 긴급구호’ 동참
               </strong>
             </div>
           </SwiperSlide>
@@ -419,15 +402,6 @@ function Sponsor() {
               <img src="/news/05.jpg" alt="" />
               <strong>
                 방탄소년단 제이홉 유니세프한국위원회에 1억 원 기부
-                ‘튀르키예·시리아 지진 피해 어린이 긴급구호’ 동참
-              </strong>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="newsGroup">
-              <img src="/news/06.jpg" alt="" />
-              <strong>
-                방탄소년단 지민 유니세프한국위원회에 1억 원 기부
                 ‘튀르키예·시리아 지진 피해 어린이 긴급구호’ 동참
               </strong>
             </div>
@@ -442,11 +416,37 @@ function Sponsor() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
+            <div className="newsGroup">
+              <img src="/news/04.jpg" alt="" />
+              <strong>
+                수지 유니세프한국위원회 ‘튀르키예·시리아 지진피해 어린이
+                긴급구호’ 1억원 기부
+              </strong>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
             <div className="newsGroup ">
               <img src="/news/08.png" alt="" />
               <strong>
                 송윤아설경구 유니세프한국위원회에 5천만원 기부 ‘튀르키예·시리아
                 지진피해 어린이 긴급구호’ 동참
+              </strong>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="newsGroup">
+              <img src="/news/02.png" alt="" />
+              <strong>
+                김연아 유니세프 친선대사 튀르키예시리아 지진 피해 어린이
+                긴급구호 유니세프한국위원회에 미화 10만 달러 기부
+              </strong>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="newsGroup">
+              <img src="/news/03.jpg" alt="" />
+              <strong>
+                배우 박서준 튀르키예시리아 지진 피해 어린이 긴급구호 1억원 기부
               </strong>
             </div>
           </SwiperSlide>

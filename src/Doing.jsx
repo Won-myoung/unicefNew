@@ -44,7 +44,7 @@ function Doing() {
 
   return (
     <div className="doing">
-      <BgBar />
+      <BgBar className="bgBar"/>
       <div className="doingTopBar">
         <h2 style={{ fontSize: calculateFontSize() }}>활동 지역</h2>
         <p>for every child, everywhere</p>
